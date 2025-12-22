@@ -11,5 +11,7 @@ public class Main {
 
         Square square = container.getBean("mySquare",Square.class);
         square.draw2D();
+
+        ((ClassPathXmlApplicationContext)container).close();
     }
 }
