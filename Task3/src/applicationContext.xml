@@ -10,21 +10,17 @@
 
 
     <!-- Define your beans here -->
+    <bean id="myDraw2d" class="com.example.Draw2d"> </bean>
+    <bean id="myDraw3d" class="com.example.Draw3d"> </bean>
 
-    <conteext:property-placeholder location="classpath:application.properties"/>
-
-    <bean id="myDatabaseOperation" class="com.databaseOperation.DatabaseOperation">
-        <property name="Url" value="${database.url}"/>
-        <property name="username" value="${database.username}"/>
-        <property name="password" value="${database.password}"/>
+    <bean id="myCircle" class="com.example.Circle" scope="singleton">
+        <constructor-arg ref="myDraw2d"/>
+        <constructor-arg ref="myDraw3d"/>
     </bean>
 
-    <bean id="myCar" class="com.databaseOperation.Car">
-        <constructor-arg ref="myDatabaseOperation"/>
-    </bean>
-
-    <bean id="myPlane" class="com.databaseOperation.Plane">
-        <property name="DatabaseOperation" ref="myDatabaseOperation"/>
+    <bean id="mySquare" class="com.example.Square" scope="prototype">
+        <property name="Draw2d" ref="myDraw2d"/>
+        <property name="Draw3d" ref="myDraw3d"/>
     </bean>
 
 </beans>
