@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:conteext="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!-- Define your beans here -->
+
+    <bean id="myDraw2d" class="com.example.Draw2d"> </bean>
+    <bean id="myDraw3d" class="com.example.Draw3d"> </bean>
+
+    <bean id="myCircle" class="com.example.Circle" scope="singleton">
+        <constructor-arg ref="myDraw2d"/>
+        <constructor-arg ref="myDraw3d"/>
+    </bean>
+
+    <bean id="mySquare" class="com.example.Square" scope="prototype">
+        <property name="Draw2d" ref="myDraw2d"/>
+        <property name="Draw3d" ref="myDraw3d"/>
+    </bean>
+
+
+
+
+    <bean id="myDataBaseOperations" class="com.example.DatabaseOperations">
+    </bean>
+    <!-- Init Method -->
+    <bean id="init-method" class="com.example.DatabaseOperations" init-method="connectToDatabase"/>
+    <!-- destroy Method -->
+    <bean id="destroy-method" class="com.example.DatabaseOperations" destroy-method="disconnectFromDatabase"/>
+
+
+</beans>
+
+
+
+
+
