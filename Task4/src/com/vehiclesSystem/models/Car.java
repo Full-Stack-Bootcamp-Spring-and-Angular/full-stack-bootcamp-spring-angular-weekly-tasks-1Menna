@@ -1,7 +1,9 @@
 package com.vehiclesSystem.models;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+@Scope("prototype")
 @Component
 public class Car implements Vehicle{
     int id;
