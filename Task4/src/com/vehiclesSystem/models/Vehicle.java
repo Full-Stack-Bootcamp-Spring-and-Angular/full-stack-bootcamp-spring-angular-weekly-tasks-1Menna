@@ -6,4 +6,11 @@ public interface Vehicle {
     public String getModel();
 
     public Type getType();
+
+    public void setId(int id);
+
+    public void setModel(String model);
+
+    public void setType(Type type);
+
 }

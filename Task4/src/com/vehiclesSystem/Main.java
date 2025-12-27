@@ -17,26 +17,48 @@ public class Main {
 
         ApplicationContext container = new AnnotationConfigApplicationContext(config.class);
 
-        Car car = container.getBean("car",Car.class);
-        car.setId(1);
-        car.setModel("2016");
-        car.setType(Type.Car);
-        CarController carController = container.getBean("carController",CarController.class);
-        carController.SaveVehicle(car);
+//        // Save Vehicle
+//        Car car = container.getBean("car",Car.class);
+//        car.setId(1);
+//        car.setModel("2016");
+//        car.setType(Type.Car);
+//        CarController carController = container.getBean("carController",CarController.class);
+//        carController.SaveVehicle(car);
+//
+//        Plane plane = container.getBean("plane",Plane.class);
+//        plane.setId(2);
+//        plane.setModel("2020");
+//        plane.setType(Type.Plane);
+//        PlaneController planeController = container.getBean("planeController",PlaneController.class);
+//        planeController.SaveVehicle(plane);
+//
+//        Bike bike = container.getBean("bike",Bike.class);
+//        bike.setId(3);
+//        bike.setModel("2025");
+//        bike.setType(Type.Bike);
+//        BikeController bikeController = container.getBean("bikeController",BikeController.class);
+//        bikeController.SaveVehicle(bike);
+//        // =====================================================================================================
 
-        Plane plane = container.getBean("plane",Plane.class);
-        plane.setId(2);
-        plane.setModel("2020");
-        plane.setType(Type.Plane);
-        PlaneController planeController = container.getBean("planeController",PlaneController.class);
-        planeController.SaveVehicle(plane);
+//        // Delete Vehicle
+//        CarController carController = container.getBean("carController",CarController.class);
+//        carController.DeleteVehicle(3);
+//        // =====================================================================================================
 
-        Bike bike = container.getBean("bike",Bike.class);
-        bike.setId(3);
-        bike.setModel("2025");
-        bike.setType(Type.Bike);
-        BikeController bikeController = container.getBean("bikeController",BikeController.class);
-        bikeController.SaveVehicle(bike);
+//        // UpdateVehicle
+//        CarController carController = container.getBean("carController",CarController.class);
+//        carController.UpdateVehicle(2,"2001","Car");
+//        // =====================================================================================================
+
+//        // SearchById
+//        CarController carController = container.getBean("carController",CarController.class);
+//        carController.SearchById(2);
+//        // =====================================================================================================
+
+//        // GetAllVehicles
+//        CarController carController = container.getBean("carController",CarController.class);
+//        carController.GetAllVehicles();
+        // =====================================================================================================
 
         ((AnnotationConfigApplicationContext)container).close();
     }
