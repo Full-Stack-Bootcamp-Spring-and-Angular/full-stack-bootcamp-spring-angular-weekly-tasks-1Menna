@@ -4,6 +4,8 @@ out/
 !**/src/test/**/out/
 libs/
 src/application.properties
+.smarttomcat/
+
 
 ### Eclipse ###
 .apt_generated
