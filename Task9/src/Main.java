@@ -13,12 +13,12 @@ public class Main {
 
         Session session = sessionFactory.getCurrentSession();
 
-//        // Create Object
-//        User user = new User(1,"Mariam","123456");
-//
-//        session.beginTransaction();
-//        session.save(user);
-//        session.getTransaction().commit();
+        // Create Object
+        User user = new User(1,"Mariam","123456");
+
+        session.beginTransaction();
+        session.save(user);
+        session.getTransaction().commit();
 
 //        // Read Object
 //        session.beginTransaction();
