@@ -1,10 +1,16 @@
 package Entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+@Setter
+@Getter
 @Entity
 @Table(name="User")
 public class User {
@@ -24,6 +30,10 @@ public class User {
         this.passwrd = passwrd;
     }
 
+    public User() {
+
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -33,27 +43,4 @@ public class User {
                 '}';
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getPasswrd() {
-        return passwrd;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setPasswrd(String passwrd) {
-        this.passwrd = passwrd;
-    }
 }

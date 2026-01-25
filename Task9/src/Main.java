@@ -13,20 +13,20 @@ public class Main {
 
         Session session = sessionFactory.getCurrentSession();
 
-        // Create Object
-        User user = new User(1,"Mariam","123456");
-
-        session.beginTransaction();
-        session.save(user);
-        session.getTransaction().commit();
-
-//        // Read Object
+//        // Create Object
+//        User user = new User(1,"Mariam","123456");
+//
 //        session.beginTransaction();
-//        User user = session.get(User.class,1);
-//
-//        user.toString();
-//
+//        session.save(user);
 //        session.getTransaction().commit();
+
+        // Read Object
+        session.beginTransaction();
+        User user = session.get(User.class,1);
+
+        System.out.println(user.toString());
+
+        session.getTransaction().commit();
 
 //        // Update Object
 //        session.beginTransaction();
