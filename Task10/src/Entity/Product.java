@@ -1,9 +1,11 @@
 package Entity;
 
+import lombok.ToString;
+
 import javax.persistence.*;
 import java.util.Date;
 
-
+@ToString
 @Entity
 @Table(name="products")
 public class Product {
@@ -28,7 +30,7 @@ public class Product {
     String manufacturer;
 
 
-    @Temporal(TemporalType.DATE)
+//    @Temporal(TemporalType.DATE)
     @Column(name="production_date")
     Date production_date;
 
@@ -45,16 +47,5 @@ public class Product {
         this.production_date = production_date;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "product_id=" + product_id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", price=" + price +
-                ", stock_quantity=" + stock_quantity +
-                ", manufacturer='" + manufacturer + '\'' +
-                ", production_date=" + production_date +
-                '}';
-    }
+
 }
