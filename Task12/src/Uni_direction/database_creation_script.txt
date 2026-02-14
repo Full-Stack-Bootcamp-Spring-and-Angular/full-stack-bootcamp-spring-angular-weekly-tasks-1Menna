@@ -1,0 +1,13 @@
+use learn;
+
+create table question(
+    id int auto_increment primary key,
+    question_name varchar(255) not null
+);
+
+create table answer(
+    id int auto_increment primary key,
+    question_id int ,
+    answer_name varchar(255) not null,
+    foreign key(question_id) references question(id)
+);
