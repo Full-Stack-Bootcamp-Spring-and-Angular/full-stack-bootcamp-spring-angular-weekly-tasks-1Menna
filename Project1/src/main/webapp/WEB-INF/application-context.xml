@@ -2,14 +2,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="
 		http://www.springframework.org/schema/beans
     	http://www.springframework.org/schema/beans/spring-beans.xsd
     	http://www.springframework.org/schema/context
     	http://www.springframework.org/schema/context/spring-context.xsd
     	http://www.springframework.org/schema/mvc
-        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 
     <!-- Step 3: Define Spring MVC view resolver -->
@@ -21,13 +23,57 @@
 
     <!-- Step 4: Add support for component scanning -->
     <context:component-scan base-package="com.myApp" />
-<!--    <context:property-placeholder location="classpath:application.properties"/>-->
+    <!--    <context:property-placeholder location="classpath:application.properties"/>-->
 
     <!-- Step 5: Add support for conversion, formatting and validation support -->
     <mvc:annotation-driven/>
 
     <!-- this line to config reading css,images and javascript files -->
     <mvc:resources mapping="/resources/**" location="/resources/"/>
+
+    <!--  ====================================================================-->
+    <!--  ====================================================================-->
+    <!-- Hibernate Configurations -->
+
+    <!--Step1: Define Database DataSource / connection pool-->
+    <bean id ="DataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/productdb?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=UTC"/>
+        <property name="user" value="root"/>
+        <property name="password" value="Menna123#"/>
+
+        <!-- there are connection pool properties for c3p0-->
+        <property name="minPoolSize" value="5"/>
+        <property name="maxPoolSize" value="20"/>
+        <property name="maxIdleTime" value="30000"/>
+    </bean>
+
+    <!--Step2: setup Hibernate SessionFactory-->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+
+        <property name="dataSource" ref="DataSource"/> <!--inject previous bean here-->
+        <property name="packagesToScan" value="com.myApp"/> <!--instead of making .annodedClass for each class in main-->
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.shoe_sql">true</prop>
+                <prop key="hbm3ddl">update</prop>
+            </props>
+        </property>
+
+    </bean>
+
+    <!--Step3: setup Hibernate transaction manager-->  <!-- this instead of making session.beginTransaction and session.getTransaction.commit-->
+    <bean id="myTransactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!--Step4: setup Hibernate transaction manager-->
+    <tx:annotation-driven transaction-manager ="myTransactionManager"/>
+
+
+
 
 </beans>
 
