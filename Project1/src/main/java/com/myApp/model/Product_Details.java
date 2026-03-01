@@ -29,4 +29,68 @@ public class Product_Details {
     @OneToOne(mappedBy = "productDetails", cascade = CascadeType.ALL) // only added for Bi-Direction
     Product product;
 
+    public Product_Details(String manufacturer, double price, int available, Date expiration_date) {
+        this.manufacturer = manufacturer;
+        this.price = price;
+        this.available = available;
+        this.expiration_date = expiration_date;
+    }
+
+
+    // Will remove it later and add lombok
+
+    public Product_Details() {
+
+    }
+
+    // setters
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setAvailable(int available) {
+        this.available = available;
+    }
+
+    public void setExpiration_date(Date expiration_date) {
+        this.expiration_date = expiration_date;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    // getters
+
+    public int getId() {
+        return id;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getAvailable() {
+        return available;
+    }
+
+    public Date getExpiration_date() {
+        return expiration_date;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
 }
