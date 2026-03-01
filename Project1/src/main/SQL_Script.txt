@@ -2,6 +2,7 @@ use productdb;
 
 create table product_details(
 	id int auto_increment primary key,
+	name varchar(255) not null,
     manufacturer varchar(255) not null,
     price double not null,
     available tinyint not null,

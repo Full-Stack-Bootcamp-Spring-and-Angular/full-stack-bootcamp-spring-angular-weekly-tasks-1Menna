@@ -23,11 +23,6 @@
                             <form:errors path="name" cssClass="error"/>
                         </div>
                         <div class="form-group">
-                            <label for="expirationDate">Expiration Date</label>
-                            <form:input type="text" cssClass="form-control" path="expirationDate" placeholder="dd/mm/yyyy"/>
-                            <form:errors path="expirationDate" cssClass="error"/>
-                        </div>
-                        <div class="form-group">
                             <label for="manufacturer">Manufacturer</label>
                             <form:input type="text" cssClass="form-control" path="manufacturer" placeholder="Manufacturer"/>
                             <form:errors path="manufacturer" cssClass="error"/>
@@ -42,6 +37,12 @@
                             <form:input type="text" cssClass="form-control" path="available" placeholder="0 or 1"/>
                             <form:errors path="manufacturer" cssClass="error"/>
                         </div>
+                        <div class="form-group">
+                            <label for="expirationDate">Expiration Date</label>
+                            <form:input type="text" cssClass="form-control" path="expirationDate" placeholder="dd/mm/yyyy"/>
+                            <form:errors path="expirationDate" cssClass="error"/>
+                        </div>
+
                         <input type="submit" class="btn btn-primary"/>
                     </div>
                 </div>

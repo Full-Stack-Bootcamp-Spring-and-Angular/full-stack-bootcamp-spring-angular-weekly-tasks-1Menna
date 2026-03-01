@@ -13,6 +13,9 @@ public class Product_Details {
     @Column(name = "id")
     int id;
 
+    @Column(name="name")
+    String name;
+
     @Column(name="manufacturer")
     String manufacturer;
 
@@ -29,7 +32,8 @@ public class Product_Details {
     @OneToOne(mappedBy = "productDetails", cascade = CascadeType.ALL) // only added for Bi-Direction
     Product product;
 
-    public Product_Details(String manufacturer, double price, int available, Date expiration_date) {
+    public Product_Details(String name, String manufacturer, double price, int available, Date expiration_date) {
+        this.name = name;
         this.manufacturer = manufacturer;
         this.price = price;
         this.available = available;
@@ -52,6 +56,10 @@ public class Product_Details {
         this.manufacturer = manufacturer;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void setPrice(double price) {
         this.price = price;
     }
@@ -60,7 +68,7 @@ public class Product_Details {
         this.available = available;
     }
 
-    public void setExpiration_date(Date expiration_date) {
+    public void setExpirationDate(Date expiration_date) {
         this.expiration_date = expiration_date;
     }
 
@@ -78,6 +86,10 @@ public class Product_Details {
         return manufacturer;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public double getPrice() {
         return price;
     }
@@ -86,7 +98,7 @@ public class Product_Details {
         return available;
     }
 
-    public Date getExpiration_date() {
+    public Date getExpirationDate() {
         return expiration_date;
     }
 
