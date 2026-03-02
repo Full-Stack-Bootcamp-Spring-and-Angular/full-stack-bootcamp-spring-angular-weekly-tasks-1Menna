@@ -39,8 +39,10 @@ public class HomeController {
     }
 
     @RequestMapping("/")
-    public String homePage()
+    public String homePage(Model model)
     {
+        List<Product> productsList = productService.getAllProducts();
+        model.addAttribute("productsList", productsList);
         return "homePage";
     }
 
@@ -56,10 +58,7 @@ public class HomeController {
     public String processAddProduct(@ModelAttribute("productModel") Product_Details productDetails, Model model){
         productService.insert(productDetails);
 
-        List<Product> productsList = productService.getAllProducts();
-        model.addAttribute("productsList", productsList);
-
-        return "homePage";
+        return "redirect:/";
     }
     //====================================================================================
     @RequestMapping("/updateProduct")
@@ -74,10 +73,7 @@ public class HomeController {
     public String processUpdateProductForm(@ModelAttribute("productModel") Product_Details productDetails, Model model){
         productService.update(productDetails);
 
-        List<Product> productsList = productService.getAllProducts();
-        model.addAttribute("productsList", productsList);
-
-        return "homePage";
+        return "redirect:/";
     }
     //====================================================================================
     @RequestMapping("/deleteProduct")
@@ -85,11 +81,15 @@ public class HomeController {
     {
         productService.deleteById(id);
 
-        List<Product> productsList = productService.getAllProducts();
-        model.addAttribute("productsList", productsList);
-
-        return "homePage";
+        return "redirect:/";
     }
     //====================================================================================
+    @RequestMapping("/showProductDetails")
+    public String showProductDetails(@RequestParam("id") int id, Model model){
+
+        Product product = productService.findById(id);
+        model.addAttribute("productModel",product.getProductDetails());
+        return  "viewDetailsPage";
+    }
 
 }

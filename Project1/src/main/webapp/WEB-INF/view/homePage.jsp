@@ -28,6 +28,7 @@
                 <td>${item.name}</td>
                 <td>
                     <form:form action="showProductDetails">
+                        <input type="hidden" name="id" value="${item.id}"/>
                         <input type="submit" class="btn btn-primary" value="View Details"/>
                     </form:form>
                 </td>
