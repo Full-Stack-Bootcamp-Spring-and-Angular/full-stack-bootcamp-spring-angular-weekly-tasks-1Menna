@@ -33,6 +33,7 @@
                 </td>
                 <td>
                     <form:form action="updateProduct">
+                        <input type="hidden" name="id" value="${item.id}"/>
                         <input type="submit" class="btn btn-warning" value="Add/update Details"/>
                     </form:form>
                 </td>

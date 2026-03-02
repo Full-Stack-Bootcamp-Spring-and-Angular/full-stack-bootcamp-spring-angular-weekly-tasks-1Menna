@@ -17,6 +17,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.transaction.Transactional;
 import java.text.SimpleDateFormat;
@@ -43,6 +44,7 @@ public class HomeController {
         return "homePage";
     }
 
+    //====================================================================================
     @RequestMapping("/addProduct")
     public String addProductPage(Model model) // send empty obj to form, so it fill it
     {
@@ -59,5 +61,24 @@ public class HomeController {
 
         return "homePage";
     }
+    //====================================================================================
+    @RequestMapping("/updateProduct")
+    public String showProductDetails(@RequestParam("id") int id ,Model model) // send empty obj to form, so it fill it
+    {
+        Product product = productService.findById(id);
+        model.addAttribute("productModel", product.getProductDetails());
+        return "updateDetailsForm";
+    }
+
+    @RequestMapping("/processUpdateProductForm")
+    public String processUpdateProductForm(@ModelAttribute("productModel") Product_Details productDetails, Model model){
+        productService.update(productDetails);
+
+        List<Product> productsList = productService.getAllProducts();
+        model.addAttribute("productsList", productsList);
+
+        return "homePage";
+    }
+    //====================================================================================
 
 }

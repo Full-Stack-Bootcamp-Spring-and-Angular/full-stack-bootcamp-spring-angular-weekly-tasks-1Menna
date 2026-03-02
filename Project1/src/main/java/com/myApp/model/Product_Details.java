@@ -27,7 +27,7 @@ public class Product_Details {
 
     @Temporal(TemporalType.DATE)
     @Column(name="expiration_date")
-    Date expiration_date;
+    Date expirationDate;
 
     @OneToOne(mappedBy = "productDetails", cascade = CascadeType.ALL) // only added for Bi-Direction
     Product product;
@@ -37,7 +37,7 @@ public class Product_Details {
         this.manufacturer = manufacturer;
         this.price = price;
         this.available = available;
-        this.expiration_date = expiration_date;
+        this.expirationDate = expiration_date;
     }
 
 
@@ -69,7 +69,7 @@ public class Product_Details {
     }
 
     public void setExpirationDate(Date expiration_date) {
-        this.expiration_date = expiration_date;
+        this.expirationDate = expiration_date;
     }
 
     public void setProduct(Product product) {
@@ -99,7 +99,7 @@ public class Product_Details {
     }
 
     public Date getExpirationDate() {
-        return expiration_date;
+        return expirationDate;
     }
 
     public Product getProduct() {

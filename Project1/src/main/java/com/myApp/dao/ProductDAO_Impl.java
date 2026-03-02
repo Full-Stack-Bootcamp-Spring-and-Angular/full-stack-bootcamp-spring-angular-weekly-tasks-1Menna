@@ -1,6 +1,7 @@
 package com.myApp.dao;
 
 import com.myApp.model.Product;
+import com.myApp.model.Product_Details;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -31,10 +32,10 @@ public class ProductDAO_Impl implements ProductDAO{
         session.delete(product);
         return product;
     }
-    public Product update(Product product){
+    public Product_Details update(Product_Details product_details){
         Session session = sessionFactory.getCurrentSession();
-        session.update(product);
-        return product;
+        session.update(product_details);
+        return product_details;
     }
     public List<Product> getAllProducts(){
         Session session = sessionFactory.getCurrentSession();
