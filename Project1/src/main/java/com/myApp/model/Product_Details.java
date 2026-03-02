@@ -1,6 +1,7 @@
 package com.myApp.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.Date;
 
 
@@ -13,18 +14,25 @@ public class Product_Details {
     @Column(name = "id")
     int id;
 
+    @NotBlank(message ="this field cannot empty or null")
     @Column(name="name")
     String name;
 
+    @NotBlank(message ="this field cannot empty or null")
     @Column(name="manufacturer")
     String manufacturer;
 
+    @NotNull(message ="this field cannot empty or null")
     @Column(name="price")
-    double price;
+    Double price;
 
+    @Min(value = 0, message = "Available must be 0 or 1")
+    @Max(value = 1, message = "Available must be 0 or 1")
+    @NotNull(message ="this field cannot empty or null")
     @Column(name="available")
-    int available;
+    Integer available;
 
+    @NotNull(message ="this field cannot empty or null")
     @Temporal(TemporalType.DATE)
     @Column(name="expiration_date")
     Date expirationDate;
@@ -60,11 +68,11 @@ public class Product_Details {
         this.name = name;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
-    public void setAvailable(int available) {
+    public void setAvailable(Integer available) {
         this.available = available;
     }
 
@@ -90,11 +98,11 @@ public class Product_Details {
         return name;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public int getAvailable() {
+    public Integer getAvailable() {
         return available;
     }
 

@@ -13,6 +13,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.transaction.Transactional;
+import javax.validation.Valid;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -55,7 +57,10 @@ public class HomeController {
     }
 
     @RequestMapping("/processAddProduct")
-    public String processAddProduct(@ModelAttribute("productModel") Product_Details productDetails){
+    public String processAddProduct(@Valid @ModelAttribute("productModel") Product_Details productDetails, BindingResult bindingResult){
+        if(bindingResult.hasErrors())
+            return "addProductForm";
+
         productService.insert(productDetails);
 
         return "redirect:/";
@@ -70,7 +75,10 @@ public class HomeController {
     }
 
     @RequestMapping("/processUpdateProductForm")
-    public String processUpdateProductForm(@ModelAttribute("productModel") Product_Details productDetails, Model model){
+    public String processUpdateProductForm(@Valid @ModelAttribute("productModel") Product_Details productDetails, BindingResult bindingResult, Model model){
+        if(bindingResult.hasErrors())
+            return "updateDetailsForm";
+
         productService.update(productDetails);
 
         return "redirect:/";

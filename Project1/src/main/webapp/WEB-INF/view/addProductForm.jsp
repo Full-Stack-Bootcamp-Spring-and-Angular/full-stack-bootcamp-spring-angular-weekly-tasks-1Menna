@@ -30,12 +30,12 @@
                         <div class="form-group">
                             <label for="price">Price</label>
                             <form:input type="text" cssClass="form-control" path="price" placeholder="Price"/>
-                            <form:errors path="manufacturer" cssClass="error"/>
+                            <form:errors path="price" cssClass="error"/>
                         </div>
                         <div class="form-group">
                             <label for="available">Availability</label>
                             <form:input type="text" cssClass="form-control" path="available" placeholder="0 or 1"/>
-                            <form:errors path="manufacturer" cssClass="error"/>
+                            <form:errors path="available" cssClass="error"/>
                         </div>
                         <div class="form-group">
                             <label for="expirationDate">Expiration Date</label>

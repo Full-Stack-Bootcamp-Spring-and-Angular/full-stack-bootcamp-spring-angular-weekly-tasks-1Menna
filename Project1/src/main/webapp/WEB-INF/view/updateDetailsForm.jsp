@@ -18,34 +18,33 @@
                             <h3>Update Product</h3>
                         </div>
                         <div class="form-group">
-                            <label for="name">Id</label>
-                            <form:input type="text" cssClass="form-control" path="id" placeholder="${productModel.id}"/>
-                            <form:errors path="name" cssClass="error"/>
+                            <label for="id">Id</label>
+                            <form:input type="text" cssClass="form-control" path="id" readonly="true" style="pointer-events: none;"/>
                         </div>
                         <div class="form-group">
                             <label for="name">product name</label>
-                            <form:input type="text" cssClass="form-control" path="name" placeholder="Enter product name"/>
+                            <form:input type="text" cssClass="form-control" path="name" />
                             <form:errors path="name" cssClass="error"/>
                         </div>
                         <div class="form-group">
                             <label for="expirationDate">Expiration Date</label>
-                            <form:input type="text" cssClass="form-control" path="expirationDate" placeholder="dd/mm/yyyy"/>
+                            <form:input type="text" cssClass="form-control" path="expirationDate" />
                             <form:errors path="expirationDate" cssClass="error"/>
                         </div>
                         <div class="form-group">
                             <label for="manufacturer">Manufacturer</label>
-                            <form:input type="text" cssClass="form-control" path="manufacturer" placeholder="dd/mm/yyyy"/>
+                            <form:input type="text" cssClass="form-control" path="manufacturer" />
                             <form:errors path="manufacturer" cssClass="error"/>
                         </div>
                         <div class="form-group">
                             <label for="price">Price</label>
-                            <form:input type="text" cssClass="form-control" path="price" placeholder="dd/mm/yyyy"/>
-                            <form:errors path="manufacturer" cssClass="error"/>
+                            <form:input type="text" cssClass="form-control" path="price"/>
+                            <form:errors path="price" cssClass="error"/>
                         </div>
                         <div class="form-group">
                             <label for="available">Availability</label>
                             <form:input type="text" cssClass="form-control" path="available" placeholder="dd/mm/yyyy"/>
-                            <form:errors path="manufacturer" cssClass="error"/>
+                            <form:errors path="available" cssClass="error"/>
                         </div>
                         <input type="submit" class="btn btn-primary"/>
                     </div>
