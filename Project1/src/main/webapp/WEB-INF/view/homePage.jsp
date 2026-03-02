@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<h1>Products Data</h1>
+<h1 class="text-center">Products Data</h1>
 <div class="tbl-div">
     <table class="table">
         <thead class="thead-dark">

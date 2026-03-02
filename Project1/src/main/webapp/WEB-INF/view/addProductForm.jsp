@@ -9,13 +9,12 @@
 
 </head>
 <body>
-    <h1>Add new Product</h1>
         <form:form action="processAddProduct" modelAttribute="productModel">
             <div class="container mt-5">
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <h3>Add Product</h3>
+                            <h3>Add New Product</h3>
                         </div>
                         <div class="form-group">
                             <label for="name">product name</label>
