@@ -39,6 +39,7 @@
                 </td>
                 <td>
                     <form:form action="deleteProduct">
+                        <input type="hidden" name="id" value="${item.id}"/>
                         <input type="submit" class="btn btn-danger" value="Delete"/>
                     </form:form>
                 </td>

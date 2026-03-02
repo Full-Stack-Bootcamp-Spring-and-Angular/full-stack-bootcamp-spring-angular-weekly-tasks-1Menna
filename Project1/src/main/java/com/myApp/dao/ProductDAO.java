@@ -9,7 +9,7 @@ public interface ProductDAO {
 
     Product insert(Product product);
     Product_Details update(Product_Details product_details);
-    Product deleteById(int id);
+    void deleteById(int id);
     Product findById(int id);
     List<Product> getAllProducts();
 

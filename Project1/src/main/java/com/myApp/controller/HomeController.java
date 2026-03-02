@@ -63,7 +63,7 @@ public class HomeController {
     }
     //====================================================================================
     @RequestMapping("/updateProduct")
-    public String showProductDetails(@RequestParam("id") int id ,Model model) // send empty obj to form, so it fill it
+    public String updateProductPage(@RequestParam("id") int id ,Model model) // send empty obj to form, so it fill it
     {
         Product product = productService.findById(id);
         model.addAttribute("productModel", product.getProductDetails());
@@ -73,6 +73,17 @@ public class HomeController {
     @RequestMapping("/processUpdateProductForm")
     public String processUpdateProductForm(@ModelAttribute("productModel") Product_Details productDetails, Model model){
         productService.update(productDetails);
+
+        List<Product> productsList = productService.getAllProducts();
+        model.addAttribute("productsList", productsList);
+
+        return "homePage";
+    }
+    //====================================================================================
+    @RequestMapping("/deleteProduct")
+    public String deleteProduct(@RequestParam("id") int id,Model model) // send empty obj to form, so it fill it
+    {
+        productService.deleteById(id);
 
         List<Product> productsList = productService.getAllProducts();
         model.addAttribute("productsList", productsList);

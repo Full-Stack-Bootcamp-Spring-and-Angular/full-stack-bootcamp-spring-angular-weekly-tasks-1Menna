@@ -26,11 +26,10 @@ public class ProductDAO_Impl implements ProductDAO{
         Session session = sessionFactory.getCurrentSession();
         return session.get(Product.class,id);
     }
-    public Product deleteById(int id){
+    public void deleteById(int id){
         Session session = sessionFactory.getCurrentSession();
         Product product = session.get(Product.class,id);
         session.delete(product);
-        return product;
     }
     public Product_Details update(Product_Details product_details){
         Session session = sessionFactory.getCurrentSession();
