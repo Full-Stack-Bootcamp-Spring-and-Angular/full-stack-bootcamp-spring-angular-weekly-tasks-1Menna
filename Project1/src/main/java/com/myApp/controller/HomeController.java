@@ -55,7 +55,7 @@ public class HomeController {
     }
 
     @RequestMapping("/processAddProduct")
-    public String processAddProduct(@ModelAttribute("productModel") Product_Details productDetails, Model model){
+    public String processAddProduct(@ModelAttribute("productModel") Product_Details productDetails){
         productService.insert(productDetails);
 
         return "redirect:/";

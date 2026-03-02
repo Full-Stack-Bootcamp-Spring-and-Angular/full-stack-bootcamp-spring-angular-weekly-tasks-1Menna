@@ -33,6 +33,13 @@ public class ProductDAO_Impl implements ProductDAO{
     }
     public Product_Details update(Product_Details product_details){
         Session session = sessionFactory.getCurrentSession();
+
+        Query q = session.createQuery("update Product set name=:n where product_details_id=:i");
+        q.setParameter("i",product_details.getId());
+        q.setParameter("n",product_details.getName());
+
+        q.executeUpdate();
+
         session.update(product_details);
         return product_details;
     }
