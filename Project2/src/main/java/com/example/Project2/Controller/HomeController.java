@@ -1,18 +1,17 @@
-package com.example.Project2.Controller;
+package com.example.Project2.controller;
 
-import com.example.Project2.Service.ProductService;
+import com.example.Project2.service.ProductServiceImpl;
 import com.example.Project2.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class HomeController {
 
     @Autowired
-    ProductService productService;
+    ProductServiceImpl productService;
 
     @PostMapping("/product")
     public Product insertProduct(@RequestBody Product product){
