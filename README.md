@@ -1,4 +1,4 @@
-## Spring & Java Backend: Hands-on Labs & Tasks
+## Spring & Java Backend: Hands-on Tasks & Projects
 
 This repository is a comprehensive collection of weekly tasks and projects focused on mastering the **Java Spring Ecosystem**. It tracks my progress through foundational and advanced concepts—from Core IoC/DI to building secure, production-ready RESTful APIs.
 
