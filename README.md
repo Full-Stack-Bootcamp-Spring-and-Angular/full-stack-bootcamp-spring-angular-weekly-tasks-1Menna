@@ -46,7 +46,32 @@ This repository is a comprehensive collection of weekly tasks and labs focused o
   <img src="https://github.com/user-attachments/assets/c41fa2af-2c42-4767-81ad-9f7e488f7209" width="500" alt="Details Page">
 </details>
 
-<details>
-   <summary><b>🚀 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/project2/Project2">Project2:  Product REST API (SpringBoot + RestApi + Data Jpa)</a></b></summary>
+ <details>
+   <summary><b>🚀 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/project2/Project2">Project2: Product REST API (SpringBoot + Data JPA)</a></b></summary>
+
+   ### 📝 Project Overview
+   A modern **RESTful Web Service** built with **Spring Boot** to manage product data. Unlike traditional MVC, this project serves as a backend API that communicates via **JSON**, making it compatible with frontend frameworks like Angular or React.
+
+   ### 🛠 Technical Highlights
+   - **Spring Boot**: Leveraging auto-configuration for faster development.
+   - **Spring Data JPA**: Utilizes the Repository pattern for abstracting database operations (zero boilerplate SQL/HQL).
+   - **REST Controller**: Implements standard HTTP methods (GET, POST, PUT, DELETE).
+   - **Postman Integration**: Tested all endpoints to ensure correct JSON request/response handling.
+
+   ### 📑 API Endpoints
+   | Action | Method | Endpoint | Description |
+   | :--- | :--- | :--- | :--- |
+   | **Create** | `POST` | `/product` | Adds a new product (Expects JSON body). |
+   | **Read** | `GET` | `/product/{id}` | Fetches a single product by its Path Variable. |
+   | **Update** | `PUT` | `/product/{id}` | Updates existing product details. |
+   | **Delete** | `DELETE` | `/product?id=x` | Removes a product via Request Parameter. |
+   | **List All** | `GET` | `/products` | Returns a full JSON list of available products. |
+ 
+   ### 💻 Tech Stack
+   - **Framework**: Spring Boot.
+   - **Persistence**: Spring Data JPA.
+   - **Database**: MySQL.
+   - **Data Format**: JSON (via Jackson).
+
 </details>
 
