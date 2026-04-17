@@ -1,6 +1,16 @@
 ## Spring & Java Backend: Hands-on Labs & Tasks
 
-This repository is a comprehensive collection of weekly tasks and labs focused on mastering the **Java Spring Ecosystem**. It tracks my progress from foundational concepts to building secure, production-ready RESTful APIs.
+This repository is a comprehensive collection of weekly tasks and projects focused on mastering the **Java Spring Ecosystem**. It tracks my progress through foundational and advanced concepts—from Core IoC/DI to building secure, production-ready RESTful APIs.
+
+---
+
+## 🗺️ Learning Roadmap & Skills
+* **Core Concepts**: Inversion of Control (IoC), Dependency Injection (DI), and Bean Lifecycle.
+* **Web Development**: Spring MVC, Request Mapping, and Form Validation with JSR-303.
+* **Data Persistence**: JDBC, Hibernate ORM (Mapping & HQL), and Spring Data JPA.
+* **Build Tools**: Maven dependency management and project lifecycle.
+* **API Design**: Developing RESTful Web Services with Spring Boot.
+* **Security**: Authentication & Role-Based Authorization (RBAC) using Spring Security.
 
 ---
 ## Featured Projects:
