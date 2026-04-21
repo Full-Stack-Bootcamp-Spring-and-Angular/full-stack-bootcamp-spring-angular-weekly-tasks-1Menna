@@ -87,7 +87,7 @@ This repository is a comprehensive collection of weekly tasks and projects focus
 
 ---
 
-## Tasks
+## Security Tasks
 
 <details>
    <summary><b>🔐 Task1: Security - Role based Access with <code>Default</code> Login Page</b> 🌟<a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_2">[LINK]</a></summary>
