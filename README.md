@@ -104,6 +104,10 @@ This repository is a comprehensive collection of weekly tasks and projects focus
    - Spring MVC & Spring Security.
    - JSP Views.
    - Java-based Configuration (Zero XML).
+
+   ### 📸 default Login Page Screenshot
+   <img src="https://github.com/user-attachments/assets/43d02eed-e315-411d-a075-3c409c9792a1" width="300" alt="login Page">
+
 </details>
 
 <details>
@@ -125,5 +129,9 @@ This repository is a comprehensive collection of weekly tasks and projects focus
    - Spring MVC & Spring Security.
    - Java Configuration (Zero XML).
    - JSP & Static Resources (CSS/Images).
+
+   ### 📸 Custom Login Page Screenshot
+   <img src="https://github.com/user-attachments/assets/cd4bee9a-37fa-4ccc-9035-dca1b538d52e" width="300" alt="login Page">
+   
 </details>
 
