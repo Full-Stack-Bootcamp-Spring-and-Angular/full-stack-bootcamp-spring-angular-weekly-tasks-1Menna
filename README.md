@@ -90,7 +90,7 @@ This repository is a comprehensive collection of weekly tasks and projects focus
 ## Security Tasks
 
 <details>
-   <summary><b>🔐 Task1: Security - Role based Access with <code>Default</code> Login Page</b> 🌟<a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_2">[LINK]</a></summary>
+   <summary><b>🔐 Task1: Security - Role based Access with <code>Default</code> Login Page</b> 🌟<a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_1">[LINK]</a></summary>
 
    ### 📝 Description
    A Spring MVC application demonstrating **Role-Based Access Control (RBAC)** using Spring Security and Java annotations.
@@ -104,10 +104,14 @@ This repository is a comprehensive collection of weekly tasks and projects focus
    - Spring MVC & Spring Security.
    - JSP Views.
    - Java-based Configuration (Zero XML).
+
+   ### 📸 default Login Page Screenshot
+   <img src="https://github.com/user-attachments/assets/43d02eed-e315-411d-a075-3c409c9792a1" width="300" alt="login Page">
+
 </details>
 
 <details>
-   <summary><b>🔐 Task2: Security - Role based Access with <code>CUSTOM</code> Login Page</b> 🌟<a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task16_Security_2/Task16_Security_2">[LINK]</summary>
+   <summary><b>🔐 Task2: Security - Role based Access with <code>CUSTOM</code> Login Page</b>🌟<a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task16_Security_2/Task16_Security_2">[LINK]</a> </summary>
 
    ### 📝 Description
    An enhanced Spring MVC Security application featuring a personalized user interface and static resource management.
@@ -125,5 +129,9 @@ This repository is a comprehensive collection of weekly tasks and projects focus
    - Spring MVC & Spring Security.
    - Java Configuration (Zero XML).
    - JSP & Static Resources (CSS/Images).
+
+   ### 📸 Custom Login Page Screenshot
+   <img src="https://github.com/user-attachments/assets/cd4bee9a-37fa-4ccc-9035-dca1b538d52e" width="300" alt="login Page">
+   
 </details>
 
