@@ -91,10 +91,10 @@ This repository is a comprehensive collection of weekly tasks and projects focus
 
 This series of tasks demonstrates a progressive journey through implementing **Spring Security** in Spring MVC, moving from basic authentication to advanced, role-aware dynamic interfaces.
 
----
+
 
 <details>
-  <summary><b>Phase 1: Fundamental RBAC with Default UI</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_1">[LINK]</a></summary>
+  <summary><b>Task 1: Fundamental RBAC with Default UI</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_1">[LINK]</a></summary>
 
   ### 📝 Focus: The Foundation
   The starting point of implementing **Role-Based Access Control (RBAC)**.
@@ -111,7 +111,7 @@ This series of tasks demonstrates a progressive journey through implementing **S
  
 
 <details>
-  <summary><b>Phase 2: UI Customization & Resource Management</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task16_Security_2/Task16_Security_2">[LINK]</a></summary>
+  <summary><b>Task 2: UI Customization & Resource Management</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task16_Security_2/Task16_Security_2">[LINK]</a></summary>
 
   ### 📝 Focus: User Experience (UX)
   Moving beyond defaults to create a branded and user-friendly security flow.
@@ -128,7 +128,7 @@ This series of tasks demonstrates a progressive journey through implementing **S
  
 
 <details>
-  <summary><b>Phase 3: Advanced Authorization & Dynamic UI Control</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task17_Security_3">[LINK]</a></summary>
+  <summary><b>Task3 3: Advanced Authorization & Dynamic UI Control</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task17_Security_3">[LINK]</a></summary>
 
   ### 📝 Focus: Professional UI Logic
   The most advanced stage where the UI becomes **Role-Aware**, providing a seamless and professional experience.
