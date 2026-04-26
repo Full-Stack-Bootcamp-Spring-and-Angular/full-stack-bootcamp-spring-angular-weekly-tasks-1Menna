@@ -87,51 +87,65 @@ This repository is a comprehensive collection of weekly tasks and projects focus
 
 ---
 
-## Security Tasks
+# 🔐 Spring Security Mastery Roadmap
+
+This series of tasks demonstrates a progressive journey through implementing **Spring Security** in Spring MVC, moving from basic authentication to advanced, role-aware dynamic interfaces.
+
+---
 
 <details>
-   <summary><b>🔐 Task1: Security - Role based Access with <code>Default</code> Login Page</b> 🌟<a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_1">[LINK]</a></summary>
+  <summary><b>Phase 1: Fundamental RBAC with Default UI</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_1">[LINK]</a></summary>
 
-   ### 📝 Description
-   A Spring MVC application demonstrating **Role-Based Access Control (RBAC)** using Spring Security and Java annotations.
+  ### 📝 Focus: The Foundation
+  The starting point of implementing **Role-Based Access Control (RBAC)**.
 
-   ### 🔑 Access Rules
-   - **Admin Page**: Restricted to `ADMIN` role.
-   - **System Page**: Restricted to `SYSTEM` role.
-   - **Login**: Secured via Spring Security **Default Login Page**.
+  ### 🔑 Key Implementations
+  - **Core Authentication**: Secured the application using Spring's built-in security filters.
+  - **Role Definition**: Established specific access rules for `ADMIN` and `SYSTEM` roles.
+  - **Zero-XML Config**: Fully configured using Java annotations.
 
-   ### 💻 Tech Stack
-   - Spring MVC & Spring Security.
-   - JSP Views.
-   - Java-based Configuration (Zero XML).
-
-   ### 📸 default Login Page Screenshot
-   <img src="https://github.com/user-attachments/assets/43d02eed-e315-411d-a075-3c409c9792a1" width="300" alt="login Page">
-
+  ### 📸 Preview
+  <img src="https://github.com/user-attachments/assets/43d02eed-e315-411d-a075-3c409c9792a1" width="300" alt="Default Login Page">
 </details>
+
+ 
 
 <details>
-   <summary><b>🔐 Task2: Security - Role based Access with <code>CUSTOM</code> Login Page</b>🌟<a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task16_Security_2/Task16_Security_2">[LINK]</a> </summary>
+  <summary><b>Phase 2: UI Customization & Resource Management</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task16_Security_2/Task16_Security_2">[LINK]</a></summary>
 
-   ### 📝 Description
-   An enhanced Spring MVC Security application featuring a personalized user interface and static resource management.
+  ### 📝 Focus: User Experience (UX)
+  Moving beyond defaults to create a branded and user-friendly security flow.
 
-   ### 🌟 New Features
-   - **Custom Login**: Replaced the default form with a **Custom JSP Login Page** for better UX.
-   - **Static Resources**: Enabled `ResourceHandlers` to serve CSS, images, and JS files.
-   - **Logout Functionality**: Implemented a secure logout process with session invalidation.
+  ### 🚀 Enhancements
+  - **Custom Login Page**: Replaced the default Spring form with a personalized JSP interface.
+  - **Static Assets**: Configured `ResourceHandlers` to serve CSS/Images while maintaining security integrity.
+  - **Secure Logout**: Implemented proper session invalidation and logout redirection.
 
-   ### 🔑 Access Rules
-   - **Admin/System Pages**: Restricted by specific roles (`ADMIN`/`SYSTEM`).
-   - **Permit All**: Access allowed for custom login and static resources (`/resources/**`).
-
-   ### 💻 Tech Stack
-   - Spring MVC & Spring Security.
-   - Java Configuration (Zero XML).
-   - JSP & Static Resources (CSS/Images).
-
-   ### 📸 Custom Login Page Screenshot
-   <img src="https://github.com/user-attachments/assets/cd4bee9a-37fa-4ccc-9035-dca1b538d52e" width="300" alt="login Page">
-   
+  ### 📸 Preview
+  <img src="https://github.com/user-attachments/assets/cd4bee9a-37fa-4ccc-9035-dca1b538d52e" width="300" alt="Custom Login Page">
 </details>
+
+ 
+
+<details>
+  <summary><b>Phase 3: Advanced Authorization & Dynamic UI Control</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task17_Security_3">[LINK]</a></summary>
+
+  ### 📝 Focus: Professional UI Logic
+  The most advanced stage where the UI becomes **Role-Aware**, providing a seamless and professional experience.
+
+  ### 💎 Advanced Features
+  - **Dynamic Content (Security Taglibs)**: The interface now adapts to the user. Admin-specific buttons or sections are hidden/shown based on the logged-in user's roles.
+  - **Principal Awareness**: Real-time display of the current **Username** and **Assigned Roles** directly on the dashboard.
+  - **Custom Access Denied Page**: Handled the `403 Forbidden` error by redirecting to a custom-designed page for unauthorized attempts.
+
+  ### 🛠 Technical Deep-Dive
+  - Used `<security:authorize>` for conditional rendering in JSP.
+  - Configured `.exceptionHandling().accessDeniedPage("/access-denied")` in the Security Filter Chain.
+
+  ### 📸 Preview
+  *(Upload your new screenshot here)*
+  <img src="YOUR_NEW_IMAGE_LINK" width="300" alt="Advanced UI Preview">
+</details>
+
+---
 
