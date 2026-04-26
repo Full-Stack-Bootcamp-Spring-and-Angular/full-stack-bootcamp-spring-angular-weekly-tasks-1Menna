@@ -143,8 +143,15 @@ This series of tasks demonstrates a progressive journey through implementing **S
   - Configured `.exceptionHandling().accessDeniedPage("/access-denied")` in the Security Filter Chain.
 
   ### 📸 Preview
-  *(Upload your new screenshot here)*
-  <img src="YOUR_NEW_IMAGE_LINK" width="300" alt="Advanced UI Preview">
+   **1. Role-Based Content & User Info:**
+  <br>
+  <img src="https://github.com/user-attachments/assets/8bac0fab-981e-4702-93fe-3a14fc1c63cf" width="500" alt="contentBasedOnRole">
+  
+  <br>
+
+  **2. Custom Access Denied Page:**
+  <br>
+  <img src="https://github.com/user-attachments/assets/0d982419-b7e4-4854-b183-fd2817d6faf1" width="400" alt="Custom Access Denied Page">
 </details>
 
 ---
