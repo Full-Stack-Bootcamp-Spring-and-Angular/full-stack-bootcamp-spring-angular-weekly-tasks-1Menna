@@ -96,10 +96,10 @@ This series of tasks demonstrates a progressive journey through implementing **S
 <details>
   <summary><b>Task 1: Fundamental RBAC with Default UI</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_1">[LINK]</a></summary>
 
-  ### 📝 Focus: The Foundation
+  ###  Focus: The Foundation
   The starting point of implementing **Role-Based Access Control (RBAC)**.
 
-  ### 🔑 Key Implementations
+  ###  Key Implementations
   - **Core Authentication**: Secured the application using Spring's built-in security filters.
   - **Role Definition**: Established specific access rules for `ADMIN` and `SYSTEM` roles.
   - **Zero-XML Config**: Fully configured using Java annotations.
@@ -113,10 +113,10 @@ This series of tasks demonstrates a progressive journey through implementing **S
 <details>
   <summary><b>Task 2: UI Customization & Resource Management</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task16_Security_2/Task16_Security_2">[LINK]</a></summary>
 
-  ### 📝 Focus: User Experience (UX)
+  ###  Focus: User Experience (UX)
   Moving beyond defaults to create a branded and user-friendly security flow.
 
-  ### 🚀 Enhancements
+  ###  Enhancements
   - **Custom Login Page**: Replaced the default Spring form with a personalized JSP interface.
   - **Static Assets**: Configured `ResourceHandlers` to serve CSS/Images while maintaining security integrity.
   - **Secure Logout**: Implemented proper session invalidation and logout redirection.
@@ -130,15 +130,15 @@ This series of tasks demonstrates a progressive journey through implementing **S
 <details>
   <summary><b>Task3 3: Advanced Authorization & Dynamic UI Control</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task17_Security_3">[LINK]</a></summary>
 
-  ### 📝 Focus: Professional UI Logic
+  ###  Focus: Professional UI Logic
   The most advanced stage where the UI becomes **Role-Aware**, providing a seamless and professional experience.
 
-  ### 💎 Advanced Features
+  ###  Advanced Features
   - **Dynamic Content (Security Taglibs)**: The interface now adapts to the user. Admin-specific buttons or sections are hidden/shown based on the logged-in user's roles.
   - **Principal Awareness**: Real-time display of the current **Username** and **Assigned Roles** directly on the dashboard.
   - **Custom Access Denied Page**: Handled the `403 Forbidden` error by redirecting to a custom-designed page for unauthorized attempts.
 
-  ### 🛠 Technical Deep-Dive
+  ###  Technical Deep-Dive
   - Used `<security:authorize>` for conditional rendering in JSP.
   - Configured `.exceptionHandling().accessDeniedPage("/access-denied")` in the Security Filter Chain.
 
