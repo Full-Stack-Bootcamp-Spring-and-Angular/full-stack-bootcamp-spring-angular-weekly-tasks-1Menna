@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'maven'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build & Compile') {
+            steps {
+                echo 'Building Spring Security Project...'
+
+                bat 'mvn clean compile'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                echo 'Running Spring Unit Tests...'
+
+                bat 'mvn test'
+            }
+        }
+    }
+}
