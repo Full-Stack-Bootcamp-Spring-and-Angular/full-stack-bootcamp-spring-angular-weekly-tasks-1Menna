@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'maven'
+        maven 'maven' 
     }
 
     stages {
@@ -14,17 +14,20 @@ pipeline {
 
         stage('Build & Compile') {
             steps {
-                echo 'Building Spring Security Project...'
-
-                bat 'mvn clean compile'
+             
+                dir('Task18_Security_4') {
+                    echo 'Building Spring Security Project...'
+                    bat 'mvn clean compile'
+                }
             }
         }
 
         stage('Run Tests') {
             steps {
-                echo 'Running Spring Unit Tests...'
-
-                bat 'mvn test'
+                dir('Task18_Security_4') {
+                    echo 'Running Spring Unit Tests...'
+                    bat 'mvn test'
+                }
             }
         }
     }
