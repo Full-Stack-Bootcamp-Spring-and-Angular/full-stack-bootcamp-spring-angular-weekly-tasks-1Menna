@@ -6,6 +6,7 @@ public class springMvcDispatcherServletInitializer extends AbstractAnnotationCon
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{
+                appConfig.class,
                 securityConfig.class
         };
     }
