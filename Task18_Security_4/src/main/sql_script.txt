@@ -3,7 +3,7 @@ use spring_security;
 create table users(
     username varchar(55) not null ,
     password varchar(55) not null,
-    enables tinyint(1) not null,
+    enabled tinyint(1) not null,
     primary key(username)
 );
 

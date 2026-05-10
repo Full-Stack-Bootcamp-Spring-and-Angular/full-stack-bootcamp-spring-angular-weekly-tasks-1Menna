@@ -25,27 +25,29 @@ public class appConfig implements org.springframework.web.servlet.config.annotat
     @Autowired
     Environment environment;
 
+    @Value("${jdbc.driver}")
+    String driver;
     @Bean
     public DataSource dataSource(){
         // create connection pool
-        ComboPooledDataSource securityDataSource = new ComboPooledDataSource();
+        ComboPooledDataSource myDataSource = new ComboPooledDataSource();
         try{
             // set database connection properties
-            securityDataSource.setDriverClass(environment.getProperty("jdbc.driver"));
-            securityDataSource.setJdbcUrl(environment.getProperty("jdbc.url"));
-            securityDataSource.setUser(environment.getProperty("jdbc.username"));
-            securityDataSource.setPassword(environment.getProperty("jdbc.password"));
+            myDataSource.setDriverClass(driver);
+            myDataSource.setJdbcUrl(environment.getProperty("jdbc.url"));
+            myDataSource.setUser(environment.getProperty("jdbc.username"));
+            myDataSource.setPassword(environment.getProperty("jdbc.password"));
 
             // set connection pool
-            securityDataSource.setInitialPoolSize(Integer.parseInt(environment.getProperty("connection.pool.initialPoolSize")));
-            securityDataSource.setMinPoolSize(Integer.parseInt(environment.getProperty("connection.pool.minPoolSize")));
-            securityDataSource.setMaxPoolSize(Integer.parseInt(environment.getProperty("connection.pool.maxPoolSize")));
-            securityDataSource.setMaxIdleTime(Integer.parseInt(environment.getProperty("connection.pool.maxIdleTime")));
+            myDataSource.setInitialPoolSize(Integer.parseInt(environment.getProperty("connection.pool.initialPoolSize")));
+            myDataSource.setMinPoolSize(Integer.parseInt(environment.getProperty("connection.pool.minPoolSize")));
+            myDataSource.setMaxPoolSize(Integer.parseInt(environment.getProperty("connection.pool.maxPoolSize")));
+            myDataSource.setMaxIdleTime(Integer.parseInt(environment.getProperty("connection.pool.maxIdleTime")));
 
         } catch (PropertyVetoException ex) {
             throw new RuntimeException(ex);
         }
-        return securityDataSource;
+        return myDataSource;
     }
 
 
