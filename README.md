@@ -128,7 +128,7 @@ This series of tasks demonstrates a progressive journey through implementing **S
  
 
 <details>
-  <summary><b>Task3 3: Advanced Authorization & Dynamic UI Control</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task17_Security_3">[LINK]</a></summary>
+  <summary><b>Task 3: Advanced Authorization & Dynamic UI Control</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task17_Security_3">[LINK]</a></summary>
 
   ###  Focus: Professional UI Logic
   The most advanced stage where the UI becomes **Role-Aware**, providing a seamless and professional experience.
@@ -152,6 +152,22 @@ This series of tasks demonstrates a progressive journey through implementing **S
   **2. Custom Access Denied Page:**
   <br>
   <img src="https://github.com/user-attachments/assets/0d982419-b7e4-4854-b183-fd2817d6faf1" width="400" alt="Custom Access Denied Page">
+</details>
+
+<details>
+  <summary><b>Task 4: Persistence with JDBC Authentication</b> 🚀 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task18_Security_4">[LINK]</a></summary>
+
+  ### Focus:
+  Transitioning from In-Memory storage to a persistent **MySQL Database**.
+
+  ### Key Implementations:
+  - **JDBC Authentication**: Integrated Spring Security with MySQL for real-time user verification.
+  - **Connection Pooling (c3p0)**: Used `ComboPooledDataSource` for efficient database resource management.
+  - **Spring Security 5 Format**: Used the `{id}encodedPassword` (e.g., `{noop}`) for modern password storage.
+  - **Properties Configuration**: Externalized credentials in `application.properties`.
+
+  ### Schema Preview
+  <img src="https://github.com/user-attachments/assets/bf009343-3198-41ae-bd85-867acb5b9b54" width="500" alt="MySQL DB">
 </details>
 
 ---
