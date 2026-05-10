@@ -1,0 +1,66 @@
+package com.app.config;
+
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import javax.sql.DataSource;
+import java.beans.PropertyVetoException;
+
+@Configuration
+@EnableWebMvc
+@ComponentScan("com.app")
+@PropertySource("classpath:application.properties")
+public class appConfig implements org.springframework.web.servlet.config.annotation.WebMvcConfigurer{
+
+    @Autowired
+    Environment environment;
+
+    @Bean
+    public DataSource dataSource(){
+        // create connection pool
+        ComboPooledDataSource securityDataSource = new ComboPooledDataSource();
+        try{
+            // set database connection properties
+            securityDataSource.setDriverClass(environment.getProperty("jdbc.driver"));
+            securityDataSource.setJdbcUrl(environment.getProperty("jdbc.url"));
+            securityDataSource.setUser(environment.getProperty("jdbc.username"));
+            securityDataSource.setPassword(environment.getProperty("jdbc.password"));
+
+            // set connection pool
+            securityDataSource.setInitialPoolSize(Integer.parseInt(environment.getProperty("connection.pool.initialPoolSize")));
+            securityDataSource.setMinPoolSize(Integer.parseInt(environment.getProperty("connection.pool.minPoolSize")));
+            securityDataSource.setMaxPoolSize(Integer.parseInt(environment.getProperty("connection.pool.maxPoolSize")));
+            securityDataSource.setMaxIdleTime(Integer.parseInt(environment.getProperty("connection.pool.maxIdleTime")));
+
+        } catch (PropertyVetoException ex) {
+            throw new RuntimeException(ex);
+        }
+        return securityDataSource;
+    }
+
+
+    @Bean
+    public ViewResolver viewResolver(){
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+
+        viewResolver.setPrefix("/WEB-INF/view/");
+        viewResolver.setSuffix(".jsp");
+
+        return viewResolver;
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry){
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+    }
+}
