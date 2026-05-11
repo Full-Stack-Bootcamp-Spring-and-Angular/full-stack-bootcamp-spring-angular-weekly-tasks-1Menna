@@ -31,4 +31,9 @@ public class HomeController {
         return "accessDenied";
     }
 
+    @RequestMapping("/register")
+    public String register(){
+        return "register";
+    }
+
 }
