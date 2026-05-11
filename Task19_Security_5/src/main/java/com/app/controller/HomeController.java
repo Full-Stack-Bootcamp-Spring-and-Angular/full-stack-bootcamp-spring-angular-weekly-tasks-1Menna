@@ -44,8 +44,9 @@ public class HomeController {
     }
 
     @RequestMapping("/addNewUser")
-    public void addNewUser(@RequestParam("username") String username, @RequestParam("password") String password){
+    public String addNewUser(@RequestParam("username") String username, @RequestParam("password") String password){
          userService.insertIntoSchema(username,password);
+        return "redirect:/login";
     }
 
 }
