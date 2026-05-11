@@ -155,7 +155,7 @@ This series of tasks demonstrates a progressive journey through implementing **S
 </details>
 
 <details>
-  <summary><b>Task 4: Persistence with JDBC Authentication</b> 🚀 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task18_Security_4">[LINK]</a></summary>
+  <summary><b>Task 4: Persistence with JDBC Authentication</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task18_Security_4">[LINK]</a></summary>
 
   ### Focus:
   Transitioning from In-Memory storage to a persistent **MySQL Database**.
@@ -168,6 +168,33 @@ This series of tasks demonstrates a progressive journey through implementing **S
 
   ### Schema Preview
   <img src="https://github.com/user-attachments/assets/bf009343-3198-41ae-bd85-867acb5b9b54" width="500" alt="MySQL DB">
+</details>
+
+<details>
+  <summary><b>Task 5: User Registration & BCrypt Password Encryption</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task19_Security_5/Task19_Security_5">[LINK]</a></summary>
+
+  ### Focus: Secure User Onboarding
+  Implementing a complete **Signup flow** with industrial-standard security practices.
+
+  ### Key Implementations:
+  - **BCrypt Hashing**: Integrated `BCryptPasswordEncoder` to ensure passwords are never stored in plain text, making the database secure against leaks.
+  - **Dynamic Registration**: Developed a custom Registration Controller and Service to handle user creation dynamically.
+  - **JdbcUserDetailsManager Integration**: Leveraged Spring Security's internal manager to perform secure `INSERT` operations into the `users` and `authorities` tables.
+  - **Custom Signup UI**: Built a responsive JSP signup form with Bootstrap, integrated with Spring Form tags and CSRF protection.
+
+  ### Technical Deep-Dive:
+  - **Dependency Injection**: Orchestrated `PasswordEncoder`, and `UserDetailsManager` beans for a clean architectural flow.
+
+  ### 📸 Preview
+  **1. Secure Registration Form:**
+  <br>
+  <img src="https://github.com/user-attachments/assets/3e95f553-6ed3-4f20-bf61-ba965c0cc634" width="200" alt="Signup Page">
+
+  <br>
+
+  **2. Encrypted Database View:**
+  <br>
+  <img src="https://github.com/user-attachments/assets/a2fa266b-d852-45a7-89cf-3a25d1c8127b" width="500" alt="BCrypt Hashed Passwords">
 </details>
 
 ---
