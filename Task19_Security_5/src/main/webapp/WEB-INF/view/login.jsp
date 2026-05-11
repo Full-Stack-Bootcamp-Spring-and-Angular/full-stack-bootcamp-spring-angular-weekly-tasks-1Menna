@@ -39,7 +39,12 @@
                         </div>
                     </c:if>
 
-                    
+                    <div>
+                        Not have account?
+                        <form:form action="register" style="display: inline;">
+                            <input type="submit" value="Register" class="link-button">
+                        </form:form>
+                    </div>
 
                 </form:form>
             </div>
