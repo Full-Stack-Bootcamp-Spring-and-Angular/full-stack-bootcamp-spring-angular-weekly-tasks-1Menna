@@ -1,0 +1,57 @@
+body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #050505; /* أسود أعمق */
+            font-family: 'Courier New', Courier, monospace; /* خط يوحي بالبرمجة */
+            overflow: hidden;
+        }
+
+        .box {
+            border: 2px solid #ff4d4d; /* المربع الأحمر */
+            padding: 40px 60px;
+            position: relative;
+            box-shadow: 0 0 15px rgba(255, 77, 77, 0.2); /* توهج خفيف للمربع */
+            animation: pulse 2s infinite;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+        }
+
+        /* أنيميشن نبض خفيف للمربع والكلمة */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.02);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* لمسة اختيارية: إضافة كلمة "Security Alert" صغيرة فوق المربع */
+        .label {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background-color: #050505;
+            padding: 0 10px;
+            color: #ff4d4d;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }

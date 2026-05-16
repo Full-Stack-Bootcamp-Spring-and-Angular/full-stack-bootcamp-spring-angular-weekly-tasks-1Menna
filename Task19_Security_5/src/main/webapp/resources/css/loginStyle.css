@@ -1,0 +1,52 @@
+
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* خلفية متدرجة مريحة */
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .custom-card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+    .form-control {
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        padding: 12px;
+        transition: all 0.3s;
+    }
+    .form-control:focus {
+        border-color: #764ba2;
+        box-shadow: 0 0 8px rgba(118, 75, 162, 0.2);
+    }
+    .btn-custom {
+        background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+        border: none;
+        color: white;
+        padding: 12px;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: transform 0.2s;
+    }
+    .btn-custom:hover {
+        transform: translateY(-2px);
+        color: white;
+    }
+
+
+
+    .link-button {
+        background: none;
+        border: none;
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+        padding: 0;
+        font: inherit;
+    }
+
+    .link-button:hover {
+        color: darkblue;
+    }
