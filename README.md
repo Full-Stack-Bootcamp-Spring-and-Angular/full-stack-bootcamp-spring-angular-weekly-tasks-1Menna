@@ -199,3 +199,47 @@ This series of tasks demonstrates a progressive journey through implementing **S
 
 ---
 
+## 🗄️ Hibernate ORM Tasks
+
+A progressive series of tasks covering Object-Relational Mapping (ORM) using **Hibernate**, from basic setup to complex relational mappings.
+
+<details>
+  <summary><b>Task 9: Hibernate Basics & Entity Lifecycle</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task9">[LINK]</a></summary>
+
+  - **Setup**: Configured `hibernate.cfg.xml` and database connection pooling.
+  - **Entity Mapping**: Used `@Entity`, `@Table`, `@Id`, and `@GeneratedValue` annotations.
+  - **CRUD Operations**: Handled persistence using `Session` methods (`save`, `get`, `update`, `delete`) within explicit transactions.
+</details>
+
+<details>
+  <summary><b>Task 10: Querying with HQL</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task10">[LINK]</a></summary>
+
+   - **HQL Queries**: Executed object-oriented SELECT, UPDATE, and DELETE queries using Hibernate Query Language.
+  - **Pagination**: Implemented result pagination using `setFirstResult()` and `setMaxResults()`.
+  - **Aggregation Functions**: Applied `COUNT`, `AVG`, `SUM`, `MIN`, and `MAX` directly on Java Entities.
+</details>
+
+<details>
+  <summary><b>Task 11: One-to-One Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task11">[LINK]</a></summary>
+
+  - **Mapping**: Configured `@OneToOne` and `@JoinColumn` to link primary and foreign keys.
+  - **Cascading**: Applied `CascadeType.ALL` to automatically propagate operations to child entities.
+  - **Bidirectional Navigation**: Used `mappedBy` to allow two-way navigation between entities.
+</details>
+
+<details>
+  <summary><b>Task 12: One-to-Many & Many-to-One Mappings</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task12">[LINK]</a></summary>
+
+  - **Parent-Child Association**: Built Uni/Bidirectional mappings using `@OneToMany` and `@ManyToOne`.
+  - **Fetch Strategies**: Managed collection performance using `FetchType.LAZY` vs `FetchType.EAGER`.
+  - **Ownership**: Placed `@JoinColumn` on the `@ManyToOne` side to avoid duplicate foreign key generation.
+</details>
+
+<details>
+  <summary><b>Task 13: Many-to-Many Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task13">[LINK]</a></summary>
+
+  - **Join Table**: Configured N:M associations using `@ManyToMany` and `@JoinTable`.
+  - **Owning Side Management**: Used `mappedBy` on the non-owning side to prevent duplicate join-table entries.
+  - **Data Integrity**: Handled bidirectional collection synchronizations without constraint violations.
+</details>
+
