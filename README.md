@@ -198,7 +198,7 @@ This series of tasks demonstrates a progressive journey through implementing **S
 </details>
 
 <details>
-  <summary><b>Task 6: Stateless Authentication with Spring Boot & JWT</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task20_Security_6">[LINK]</a></summary>
+  <summary><b>Task 6: Stateless Authentication with Spring Boot & JWT</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task20_Security_JWT/springJwt">[LINK]</a></summary>
 
   ### Focus: Modern REST Security
   Transitioning from traditional Session-Based security to **Stateless JWT (JSON Web Token) Authentication** for RESTful APIs.
