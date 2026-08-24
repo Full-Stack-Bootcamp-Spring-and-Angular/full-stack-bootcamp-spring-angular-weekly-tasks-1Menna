@@ -86,10 +86,85 @@ This repository is a comprehensive collection of weekly tasks and projects focus
 </details>
 
 ---
+## 🌱 Spring Core Tasks
+
+Understanding the core foundations of the Spring Framework, transitioning from tightly coupled Java code to loosely coupled architectures using Inversion of Control (IoC) and Dependency Injection (DI).
+
+<details>
+  <summary><b>Inversion of Control (IoC) Container</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task1">[LINK]</a></summary>
+
+  ### Focus: Spring Container & Bean Lifecycle
+  Decoupling object creation and application lifecycle management by delegating control to the **Spring IoC Container**.
+
+  ### Key Implementations:
+  - **Spring Container Setup**: Initialized and managed the Application Context (`ClassPathXmlApplicationContext`).
+  - **Bean Configuration**: Defined Java beans dynamically using XML metadata configuration.
+  - **Loose Coupling**: Injected interface abstractions rather than concrete implementations to achieve loose coupling.
+
+</details>
+
+<details>
+  <summary><b>Dependency Injection (DI) Strategies</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task2">[LINK]</a></summary>
+
+  ### Focus: Automated Object Wiring
+  Eliminating direct instantiation (`new` keyword) across components by letting Spring inject dependencies dynamically.
+
+  ### Key Implementations:
+  - **Constructor Injection**: Implemented constructor-based injection for mandatory dependencies to ensure immutability.
+  - **Setter Injection**: Utilized setter methods for optional dependencies and flexible runtime configurations.
+  - **Literal & Properties Injection**: Injected hardcoded values and externalized properties files directly into Bean attributes.
+
+</details>
+
+---
+## 🗄️ Hibernate ORM Tasks
+
+A progressive series of tasks covering Object-Relational Mapping (ORM) using **Hibernate**, from basic setup to complex relational mappings.
+
+<details>
+  <summary><b>Hibernate Basics & Entity Lifecycle</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task9">[LINK]</a></summary>
+
+  - **Setup**: Configured `hibernate.cfg.xml` and database connection pooling.
+  - **Entity Mapping**: Used `@Entity`, `@Table`, `@Id`, and `@GeneratedValue` annotations.
+  - **CRUD Operations**: Handled persistence using `Session` methods (`save`, `get`, `update`, `delete`) within explicit transactions.
+</details>
+
+<details>
+  <summary><b>Querying with HQL</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task10">[LINK]</a></summary>
+
+   - **HQL Queries**: Executed object-oriented SELECT, UPDATE, and DELETE queries using Hibernate Query Language.
+  - **Pagination**: Implemented result pagination using `setFirstResult()` and `setMaxResults()`.
+  - **Aggregation Functions**: Applied `COUNT`, `AVG`, `SUM`, `MIN`, and `MAX` directly on Java Entities.
+</details>
+
+<details>
+  <summary><b>One-to-One Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task11">[LINK]</a></summary>
+
+  - **Mapping**: Configured `@OneToOne` and `@JoinColumn` to link primary and foreign keys.
+  - **Cascading**: Applied `CascadeType.ALL` to automatically propagate operations to child entities.
+  - **Bidirectional Navigation**: Used `mappedBy` to allow two-way navigation between entities.
+</details>
+
+<details>
+  <summary><b>One-to-Many & Many-to-One Mappings</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task12">[LINK]</a></summary>
+
+  - **Parent-Child Association**: Built Uni/Bidirectional mappings using `@OneToMany` and `@ManyToOne`.
+  - **Fetch Strategies**: Managed collection performance using `FetchType.LAZY` vs `FetchType.EAGER`.
+  - **Ownership**: Placed `@JoinColumn` on the `@ManyToOne` side to avoid duplicate foreign key generation.
+</details>
+
+<details>
+  <summary><b>Task 13: Many-to-Many Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task13">[LINK]</a></summary>
+
+  - **Join Table**: Configured N:M associations using `@ManyToMany` and `@JoinTable`.
+  - **Owning Side Management**: Used `mappedBy` on the non-owning side to prevent duplicate join-table entries.
+  - **Data Integrity**: Handled bidirectional collection synchronizations without constraint violations.
+</details>
+
+---
 ## 🔐 Spring Security Tasks
 
 This series of tasks demonstrates a progressive journey through implementing **Spring Security** in Spring MVC, moving from basic authentication to advanced, role-aware dynamic interfaces.
-
 
 
 <details>
@@ -219,49 +294,3 @@ This series of tasks demonstrates a progressive journey through implementing **S
 </details>
 
 ---
-## 🗄️ Hibernate ORM Tasks
-
-A progressive series of tasks covering Object-Relational Mapping (ORM) using **Hibernate**, from basic setup to complex relational mappings.
-
-<details>
-  <summary><b>Hibernate Basics & Entity Lifecycle</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task9">[LINK]</a></summary>
-
-  - **Setup**: Configured `hibernate.cfg.xml` and database connection pooling.
-  - **Entity Mapping**: Used `@Entity`, `@Table`, `@Id`, and `@GeneratedValue` annotations.
-  - **CRUD Operations**: Handled persistence using `Session` methods (`save`, `get`, `update`, `delete`) within explicit transactions.
-</details>
-
-<details>
-  <summary><b>Querying with HQL</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task10">[LINK]</a></summary>
-
-   - **HQL Queries**: Executed object-oriented SELECT, UPDATE, and DELETE queries using Hibernate Query Language.
-  - **Pagination**: Implemented result pagination using `setFirstResult()` and `setMaxResults()`.
-  - **Aggregation Functions**: Applied `COUNT`, `AVG`, `SUM`, `MIN`, and `MAX` directly on Java Entities.
-</details>
-
-<details>
-  <summary><b>One-to-One Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task11">[LINK]</a></summary>
-
-  - **Mapping**: Configured `@OneToOne` and `@JoinColumn` to link primary and foreign keys.
-  - **Cascading**: Applied `CascadeType.ALL` to automatically propagate operations to child entities.
-  - **Bidirectional Navigation**: Used `mappedBy` to allow two-way navigation between entities.
-</details>
-
-<details>
-  <summary><b>One-to-Many & Many-to-One Mappings</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task12">[LINK]</a></summary>
-
-  - **Parent-Child Association**: Built Uni/Bidirectional mappings using `@OneToMany` and `@ManyToOne`.
-  - **Fetch Strategies**: Managed collection performance using `FetchType.LAZY` vs `FetchType.EAGER`.
-  - **Ownership**: Placed `@JoinColumn` on the `@ManyToOne` side to avoid duplicate foreign key generation.
-</details>
-
-<details>
-  <summary><b>Task 13: Many-to-Many Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task13">[LINK]</a></summary>
-
-  - **Join Table**: Configured N:M associations using `@ManyToMany` and `@JoinTable`.
-  - **Owning Side Management**: Used `mappedBy` on the non-owning side to prevent duplicate join-table entries.
-  - **Data Integrity**: Handled bidirectional collection synchronizations without constraint violations.
-</details>
-
----
-
