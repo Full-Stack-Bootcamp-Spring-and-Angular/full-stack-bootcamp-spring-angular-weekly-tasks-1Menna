@@ -197,6 +197,28 @@ This series of tasks demonstrates a progressive journey through implementing **S
   <img src="https://github.com/user-attachments/assets/a2fa266b-d852-45a7-89cf-3a25d1c8127b" width="500" alt="BCrypt Hashed Passwords">
 </details>
 
+<details>
+  <summary><b>Task 6: Stateless Authentication with Spring Boot & JWT</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task20_Security_6">[LINK]</a></summary>
+
+  ### Focus: Modern REST Security
+  Transitioning from traditional Session-Based security to **Stateless JWT (JSON Web Token) Authentication** for RESTful APIs.
+
+  ### Key Implementations:
+  - **Stateless Architecture**: Configured `SessionCreationPolicy.STATELESS` in Spring Security to eliminate server-side session overhead.
+  - **CSRF Protection**: Disabled CSRF protection (`csrf.disable()`) as the API relies on stateless JWT authentication rather than session cookies.
+  - **Custom JWT Filter**: Developed `JwtAuthenticationFilter` (extending `OncePerRequestFilter`) to intercept requests, extract Bearer tokens from headers, and populate the `SecurityContextHolder`.
+  - **Clean Architecture & DTOs**: Implemented structured layers across `controllers`, `services`, `entities`, `repositories`, and `models` for request validation and response handling.
+   
+
+ ### 📑 API Endpoints & Postman Verification
+  | Action | Method | Endpoint | Access | Description |
+  | :--- | :--- | :--- | :--- | :--- |
+  | **Register** | `POST` | `/rest/auth/register` | Public | Accepts user details (`firstname`, `email`, `role`, etc.) and returns an `accessToken`. |
+  | **Login** | `POST` | `/rest/auth/login` | Public | Authenticates credentials and returns a valid JWT `accessToken`. |
+  | **Home Dashboard** | `GET` | `/rest/home` | Secured | Protected resource requiring `Authorization: Bearer <JWT>` header to return secured payload. |
+
+</details>
+
 ---
 
 ## 🗄️ Hibernate ORM Tasks
