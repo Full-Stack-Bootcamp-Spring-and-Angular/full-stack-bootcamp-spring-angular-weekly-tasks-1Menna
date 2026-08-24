@@ -86,20 +86,20 @@ This repository is a comprehensive collection of weekly tasks and projects focus
 </details>
 
 ---
-## 🌱 Spring Core Tasks
+  ## 🌱 Spring Core Tasks
 
-Understanding the core foundations of the Spring Framework, transitioning from tightly coupled Java code to loosely coupled architectures using Inversion of Control (IoC) and Dependency Injection (DI).
+Understanding the core foundations of the Spring Framework, transitioning from tightly coupled Java code to loosely coupled architectures using Inversion of Control (IoC), Dependency Injection (DI), Bean Lifecycles, and Annotation-driven configurations.
 
 <details>
   <summary><b>Inversion of Control (IoC) Container</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task1">[LINK]</a></summary>
 
-  ### Focus: Spring Container & Bean Lifecycle
+  ### Focus: Spring Container & Bean Management
   Decoupling object creation and application lifecycle management by delegating control to the **Spring IoC Container**.
 
   ### Key Implementations:
   - **Spring Container Setup**: Initialized and managed the Application Context (`ClassPathXmlApplicationContext`).
-  - **Bean Configuration**: Defined Java beans dynamically using XML metadata configuration.
-  - **Loose Coupling**: Injected interface abstractions rather than concrete implementations to achieve loose coupling.
+  - **XML Bean Configuration**: Defined Java beans dynamically using XML metadata.
+  - **Loose Coupling**: Programmed to interfaces rather than concrete implementations to achieve modular architecture.
 
 </details>
 
@@ -110,9 +110,82 @@ Understanding the core foundations of the Spring Framework, transitioning from t
   Eliminating direct instantiation (`new` keyword) across components by letting Spring inject dependencies dynamically.
 
   ### Key Implementations:
-  - **Constructor Injection**: Implemented constructor-based injection for mandatory dependencies to ensure immutability.
-  - **Setter Injection**: Utilized setter methods for optional dependencies and flexible runtime configurations.
-  - **Literal & Properties Injection**: Injected hardcoded values and externalized properties files directly into Bean attributes.
+  - **Constructor Injection**: Implemented constructor-based injection for mandatory dependencies to guarantee immutability.
+  - **Setter Injection**: Utilized setter methods for optional dependencies and dynamic runtime values.
+  - **Properties Injection**: Injected literal values and externalized properties files directly into Bean fields.
+
+</details>
+
+<details>
+  <summary><b>Bean Scopes & Lifecycle Management</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task3">[LINK]</a></summary>
+
+  ### Focus: Advanced XML Configuration & Lifecycle Hooks
+  Managing bean instances and controlling custom initialization and destruction behaviors within the XML context.
+
+  ### Key Implementations:
+  - **Bean Scopes**: Explored `singleton` (default single instance) versus `prototype` (new instance per request) scope behaviors.
+  - **Custom Lifecycle Hooks**: Defined custom `init-method` and `destroy-method` callbacks in XML for resource setup and cleanup.
+  - **Lifecycle Awareness**: Managed bean creation and destruction flows during ApplicationContext startup and shutdown.
+
+</details>
+
+<details>
+  <summary><b>Pure Java Configuration & Component Scanning</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task4">[LINK]</a></summary>
+
+  ### Focus: XML-Free Annotation-Based Configuration
+  Transitioning completely away from XML files towards modern, type-safe Java Configuration classes and stereotyping annotations.
+
+  ### Key Implementations:
+  - **Java Config Class**: Replaced XML files with a dedicated `@Configuration` class.
+  - **Automated Component Scanning**: Configured `@ComponentScan` to automatically discover and register beans within candidate packages.
+  - **Stereotype Annotations**: Marked target classes with `@Component` for automatic Spring IoC container registration.
+  - **Annotation Application Context**: Managed the application context using `AnnotationConfigApplicationContext`.
+
+</details>
+
+---
+## 🌐 Spring MVC Tasks
+
+Building dynamic web applications, handling HTTP request flows, processing user inputs, managing database connectivity via JDBC, and implementing robust form validation with JSR-303 and custom annotations.
+
+<details>
+  <summary><b>Spring MVC Fundamentals & Data Persistence</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task5">[LINK]</a></summary>
+
+  ### Focus: Web Request Processing & JDBC Integration
+  Handling Web HTTP requests via Controllers and binding request data directly into database operations using raw JDBC and lifecycle hooks.
+
+  ### Key Implementations:
+  - **Request Mapping**: Utilized `@Controller` and `@RequestMapping` to handle route navigation and view mapping.
+  - **Parameter Binding**: Extracted user inputs using `@RequestParam` as well as direct `HttpServletRequest` parameters.
+  - **JDBC Persistence Layer**: Integrated a custom DAO using `DriverManager` and `PreparedStatement` to persist submitted web forms into a MySQL database.
+  - **Lifecycle Callbacks**: Leveraged `@PostConstruct` for database driver initialization and `@PreDestroy` for graceful connection closure.
+
+</details>
+
+<details>
+  <summary><b>Model Attribute Binding & Static Resource Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task6">[LINK]</a></summary>
+
+  ### Focus: Form Data Binding & Web MVC Customization
+  Simplifying form handling by binding full HTTP request parameters directly into Java Domain Models, while serving static frontend assets.
+
+  ### Key Implementations:
+  - **Model Data Binding**: Used `@ModelAttribute` to automatically bind HTML form input fields directly into a `UserModel` POJO.
+  - **Model Transfer**: Transported populated objects back to confirmation views using Spring's `Model` interface.
+  - **Static Resource Configuration**: Extended `WebMvcConfigurerAdapter` and configured `ResourceHandlerRegistry` to serve static UI assets (CSS, JS, Images) from the `/resources/` path.
+
+</details>
+
+<details>
+  <summary><b>Server-Side Form Validation & Custom Constraint Annotations</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task7">[LINK]</a></summary>
+
+  ### Focus: Advanced JSR-303 Validation & Class-Level Rules
+  Enforcing data integrity through server-side validation rules and creating custom reusable validation constraints for complex field comparisons.
+
+  ### Key Implementations:
+  - **Declarative Validation**: Applied `@Valid` on model attributes and caught validation errors gracefully using `BindingResult`.
+  - **Custom Class-Level Annotation**: Developed `@FieldsValueMatch` to perform multi-field cross-validation (e.g., matching `password` and `confirmPassword`).
+  - **Constraint Validator**: Built `FieldsValueMatchValidator` implementing `ConstraintValidator` and used `BeanWrapperImpl` to dynamically extract and compare entity properties.
+  - **Targeted Error Messages**: Disabled default constraint violations and explicitly targeted error messages to specific form field nodes for a better user experience.
 
 </details>
 
@@ -154,7 +227,7 @@ A progressive series of tasks covering Object-Relational Mapping (ORM) using **H
 </details>
 
 <details>
-  <summary><b>Task 13: Many-to-Many Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task13">[LINK]</a></summary>
+  <summary><b>Many-to-Many Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task13">[LINK]</a></summary>
 
   - **Join Table**: Configured N:M associations using `@ManyToMany` and `@JoinTable`.
   - **Owning Side Management**: Used `mappedBy` on the non-owning side to prevent duplicate join-table entries.
