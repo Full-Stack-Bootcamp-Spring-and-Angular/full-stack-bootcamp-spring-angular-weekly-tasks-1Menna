@@ -86,69 +86,6 @@ This repository is a comprehensive collection of weekly tasks and projects focus
 </details>
 
 ---
-## 🗄️ Hibernate ORM Tasks
-
-A progressive series of tasks covering Object-Relational Mapping (ORM) using **Hibernate**, from basic setup to complex relational mappings.
-
-<details>
-  <summary><b>Task 9: Hibernate Basics & Entity Lifecycle</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task9">[LINK]</a></summary>
-
-  - **Setup**: Configured `hibernate.cfg.xml` and database connection pooling.
-  - **Entity Mapping**: Used `@Entity`, `@Table`, `@Id`, and `@GeneratedValue` annotations.
-  - **CRUD Operations**: Handled persistence using `Session` methods (`save`, `get`, `update`, `delete`) within explicit transactions.
-</details>
-
-<details>
-  <summary><b>Task 10: Querying with HQL</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task10">[LINK]</a></summary>
-
-   - **HQL Queries**: Executed object-oriented SELECT, UPDATE, and DELETE queries using Hibernate Query Language.
-  - **Pagination**: Implemented result pagination using `setFirstResult()` and `setMaxResults()`.
-  - **Aggregation Functions**: Applied `COUNT`, `AVG`, `SUM`, `MIN`, and `MAX` directly on Java Entities.
-</details>
-
-<details>
-  <summary><b>Task 11: One-to-One Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task11">[LINK]</a></summary>
-
-  - **Mapping**: Configured `@OneToOne` and `@JoinColumn` to link primary and foreign keys.
-  - **Cascading**: Applied `CascadeType.ALL` to automatically propagate operations to child entities.
-  - **Bidirectional Navigation**: Used `mappedBy` to allow two-way navigation between entities.
-</details>
-
-<details>
-  <summary><b>Task 12: One-to-Many & Many-to-One Mappings</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task12">[LINK]</a></summary>
-
-  - **Parent-Child Association**: Built Uni/Bidirectional mappings using `@OneToMany` and `@ManyToOne`.
-  - **Fetch Strategies**: Managed collection performance using `FetchType.LAZY` vs `FetchType.EAGER`.
-  - **Ownership**: Placed `@JoinColumn` on the `@ManyToOne` side to avoid duplicate foreign key generation.
-</details>
-
-<details>
-  <summary><b>Task 13: Many-to-Many Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task13">[LINK]</a></summary>
-
-  - **Join Table**: Configured N:M associations using `@ManyToMany` and `@JoinTable`.
-  - **Owning Side Management**: Used `mappedBy` on the non-owning side to prevent duplicate join-table entries.
-  - **Data Integrity**: Handled bidirectional collection synchronizations without constraint violations.
-</details>
-
----
-## 📦 Maven Build & Dependency Management 
-
-Transitioning from manual JAR dependency management to automated project lifecycle and build orchestration using **Apache Maven**.
-
-<details>
-  <summary><b>Task 14: Maven Build Automation & Multi-Module Configuration</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task14">[LINK]</a></summary>
-
-  ### Focus: Project Structuring & Lifecycle Management
-  Automating build workflows, managing library dependencies, and standardizing project structure using **Apache Maven**.
-
-  ### Key Implementations:
-  - **Dependency Management**: Centralized dependency declarations and version control inside `pom.xml` to eliminate JAR conflicts.
-  - **Build Lifecycle**: Executed standard lifecycle phases (`clean`, `compile`, `test`, `package`, `install`) for repeatable builds.
-  - **Packaging**: Packaged application components into executable JAR / WAR artifacts.
-
-</details>
-
----
 ## 🔐 Spring Security Tasks
 
 This series of tasks demonstrates a progressive journey through implementing **Spring Security** in Spring MVC, moving from basic authentication to advanced, role-aware dynamic interfaces.
@@ -156,7 +93,7 @@ This series of tasks demonstrates a progressive journey through implementing **S
 
 
 <details>
-  <summary><b>Task 15: Fundamental RBAC with Default UI</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_1">[LINK]</a></summary>
+  <summary><b>Fundamental RBAC with Default UI</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_1">[LINK]</a></summary>
 
   ###  Focus: The Foundation
   The starting point of implementing **Role-Based Access Control (RBAC)**.
@@ -173,7 +110,7 @@ This series of tasks demonstrates a progressive journey through implementing **S
  
 
 <details>
-  <summary><b>Task 16: UI Customization & Resource Management</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task16_Security_2/Task16_Security_2">[LINK]</a></summary>
+  <summary><b>UI Customization & Resource Management</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task16_Security_2/Task16_Security_2">[LINK]</a></summary>
 
   ###  Focus: User Experience (UX)
   Moving beyond defaults to create a branded and user-friendly security flow.
@@ -190,7 +127,7 @@ This series of tasks demonstrates a progressive journey through implementing **S
  
 
 <details>
-  <summary><b>Task 17: Advanced Authorization & Dynamic UI Control</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task17_Security_3">[LINK]</a></summary>
+  <summary><b>Advanced Authorization & Dynamic UI Control</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task17_Security_3">[LINK]</a></summary>
 
   ###  Focus: Professional UI Logic
   The most advanced stage where the UI becomes **Role-Aware**, providing a seamless and professional experience.
@@ -217,7 +154,7 @@ This series of tasks demonstrates a progressive journey through implementing **S
 </details>
 
 <details>
-  <summary><b>Task 18: Persistence with JDBC Authentication</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task18_Security_4">[LINK]</a></summary>
+  <summary><b>Persistence with JDBC Authentication</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task18_Security_4">[LINK]</a></summary>
 
   ### Focus:
   Transitioning from In-Memory storage to a persistent **MySQL Database**.
@@ -233,7 +170,7 @@ This series of tasks demonstrates a progressive journey through implementing **S
 </details>
 
 <details>
-  <summary><b>Task 19: User Registration & BCrypt Password Encryption</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task19_Security_5/Task19_Security_5">[LINK]</a></summary>
+  <summary><b>User Registration & BCrypt Password Encryption</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task19_Security_5/Task19_Security_5">[LINK]</a></summary>
 
   ### Focus: Secure User Onboarding
   Implementing a complete **Signup flow** with industrial-standard security practices.
@@ -260,7 +197,7 @@ This series of tasks demonstrates a progressive journey through implementing **S
 </details>
 
 <details>
-  <summary><b>Task 20: Stateless Authentication with Spring Boot & JWT</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task20_Security_JWT/springJwt">[LINK]</a></summary>
+  <summary><b>Stateless Authentication with Spring Boot & JWT</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task20_Security_JWT/springJwt">[LINK]</a></summary>
 
   ### Focus: Modern REST Security
   Transitioning from traditional Session-Based security to **Stateless JWT (JSON Web Token) Authentication** for RESTful APIs.
@@ -279,6 +216,51 @@ This series of tasks demonstrates a progressive journey through implementing **S
   | **Login** | `POST` | `/rest/auth/login` | Public | Authenticates credentials and returns a valid JWT `accessToken`. |
   | **Home Dashboard** | `GET` | `/rest/home` | Secured | Protected resource requiring `Authorization: Bearer <JWT>` header to return secured payload. |
 
+</details>
+
+---
+## 🗄️ Hibernate ORM Tasks
+
+A progressive series of tasks covering Object-Relational Mapping (ORM) using **Hibernate**, from basic setup to complex relational mappings.
+
+<details>
+  <summary><b>Hibernate Basics & Entity Lifecycle</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task9">[LINK]</a></summary>
+
+  - **Setup**: Configured `hibernate.cfg.xml` and database connection pooling.
+  - **Entity Mapping**: Used `@Entity`, `@Table`, `@Id`, and `@GeneratedValue` annotations.
+  - **CRUD Operations**: Handled persistence using `Session` methods (`save`, `get`, `update`, `delete`) within explicit transactions.
+</details>
+
+<details>
+  <summary><b>Querying with HQL</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task10">[LINK]</a></summary>
+
+   - **HQL Queries**: Executed object-oriented SELECT, UPDATE, and DELETE queries using Hibernate Query Language.
+  - **Pagination**: Implemented result pagination using `setFirstResult()` and `setMaxResults()`.
+  - **Aggregation Functions**: Applied `COUNT`, `AVG`, `SUM`, `MIN`, and `MAX` directly on Java Entities.
+</details>
+
+<details>
+  <summary><b>One-to-One Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task11">[LINK]</a></summary>
+
+  - **Mapping**: Configured `@OneToOne` and `@JoinColumn` to link primary and foreign keys.
+  - **Cascading**: Applied `CascadeType.ALL` to automatically propagate operations to child entities.
+  - **Bidirectional Navigation**: Used `mappedBy` to allow two-way navigation between entities.
+</details>
+
+<details>
+  <summary><b>One-to-Many & Many-to-One Mappings</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task12">[LINK]</a></summary>
+
+  - **Parent-Child Association**: Built Uni/Bidirectional mappings using `@OneToMany` and `@ManyToOne`.
+  - **Fetch Strategies**: Managed collection performance using `FetchType.LAZY` vs `FetchType.EAGER`.
+  - **Ownership**: Placed `@JoinColumn` on the `@ManyToOne` side to avoid duplicate foreign key generation.
+</details>
+
+<details>
+  <summary><b>Task 13: Many-to-Many Relational Mapping</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task13">[LINK]</a></summary>
+
+  - **Join Table**: Configured N:M associations using `@ManyToMany` and `@JoinTable`.
+  - **Owning Side Management**: Used `mappedBy` on the non-owning side to prevent duplicate join-table entries.
+  - **Data Integrity**: Handled bidirectional collection synchronizations without constraint violations.
 </details>
 
 ---
