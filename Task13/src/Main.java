@@ -29,13 +29,14 @@ public class Main {
         courses.add(new Course("Python"));
         courses.add(new Course("CPP"));
 
-        for(Course course:courses){
-            session.save(course);
-        }
-
         for(Student student:students){
             student.setCourses(courses);
             session.save(student);
+        }
+
+        for(Course course:courses){
+            course.setStudents(students);
+            session.save(course);
         }
 
 
