@@ -86,141 +86,6 @@ This repository is a comprehensive collection of weekly tasks and projects focus
 </details>
 
 ---
-
-## 🔐 Spring Security Tasks
-
-This series of tasks demonstrates a progressive journey through implementing **Spring Security** in Spring MVC, moving from basic authentication to advanced, role-aware dynamic interfaces.
-
-
-
-<details>
-  <summary><b>Task 1: Fundamental RBAC with Default UI</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_1">[LINK]</a></summary>
-
-  ###  Focus: The Foundation
-  The starting point of implementing **Role-Based Access Control (RBAC)**.
-
-  ###  Key Implementations
-  - **Core Authentication**: Secured the application using Spring's built-in security filters.
-  - **Role Definition**: Established specific access rules for `ADMIN` and `SYSTEM` roles.
-  - **Zero-XML Config**: Fully configured using Java annotations.
-
-  ### 📸 Preview
-  <img src="https://github.com/user-attachments/assets/43d02eed-e315-411d-a075-3c409c9792a1" width="300" alt="Default Login Page">
-</details>
-
- 
-
-<details>
-  <summary><b>Task 2: UI Customization & Resource Management</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task16_Security_2/Task16_Security_2">[LINK]</a></summary>
-
-  ###  Focus: User Experience (UX)
-  Moving beyond defaults to create a branded and user-friendly security flow.
-
-  ###  Enhancements
-  - **Custom Login Page**: Replaced the default Spring form with a personalized JSP interface.
-  - **Static Assets**: Configured `ResourceHandlers` to serve CSS/Images while maintaining security integrity.
-  - **Secure Logout**: Implemented proper session invalidation and logout redirection.
-
-  ### 📸 Preview
-  <img src="https://github.com/user-attachments/assets/cd4bee9a-37fa-4ccc-9035-dca1b538d52e" width="300" alt="Custom Login Page">
-</details>
-
- 
-
-<details>
-  <summary><b>Task 3: Advanced Authorization & Dynamic UI Control</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task17_Security_3">[LINK]</a></summary>
-
-  ###  Focus: Professional UI Logic
-  The most advanced stage where the UI becomes **Role-Aware**, providing a seamless and professional experience.
-
-  ###  Advanced Features
-  - **Dynamic Content (Security Taglibs)**: The interface now adapts to the user. Admin-specific buttons or sections are hidden/shown based on the logged-in user's roles.
-  - **Principal Awareness**: Real-time display of the current **Username** and **Assigned Roles** directly on the dashboard.
-  - **Custom Access Denied Page**: Handled the `403 Forbidden` error by redirecting to a custom-designed page for unauthorized attempts.
-
-  ###  Technical Deep-Dive
-  - Used `<security:authorize>` for conditional rendering in JSP.
-  - Configured `.exceptionHandling().accessDeniedPage("/access-denied")` in the Security Filter Chain.
-
-  ### 📸 Preview
-   **1. Role-Based Content & User Info:**
-  <br>
-  <img src="https://github.com/user-attachments/assets/8bac0fab-981e-4702-93fe-3a14fc1c63cf" width="500" alt="contentBasedOnRole">
-  
-  <br>
-
-  **2. Custom Access Denied Page:**
-  <br>
-  <img src="https://github.com/user-attachments/assets/0d982419-b7e4-4854-b183-fd2817d6faf1" width="400" alt="Custom Access Denied Page">
-</details>
-
-<details>
-  <summary><b>Task 4: Persistence with JDBC Authentication</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task18_Security_4">[LINK]</a></summary>
-
-  ### Focus:
-  Transitioning from In-Memory storage to a persistent **MySQL Database**.
-
-  ### Key Implementations:
-  - **JDBC Authentication**: Integrated Spring Security with MySQL for real-time user verification.
-  - **Connection Pooling (c3p0)**: Used `ComboPooledDataSource` for efficient database resource management.
-  - **Spring Security 5 Format**: Used the `{id}encodedPassword` (e.g., `{noop}`) for modern password storage.
-  - **Properties Configuration**: Externalized credentials in `application.properties`.
-
-  ### Schema Preview
-  <img src="https://github.com/user-attachments/assets/bf009343-3198-41ae-bd85-867acb5b9b54" width="500" alt="MySQL DB">
-</details>
-
-<details>
-  <summary><b>Task 5: User Registration & BCrypt Password Encryption</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task19_Security_5/Task19_Security_5">[LINK]</a></summary>
-
-  ### Focus: Secure User Onboarding
-  Implementing a complete **Signup flow** with industrial-standard security practices.
-
-  ### Key Implementations:
-  - **BCrypt Hashing**: Integrated `BCryptPasswordEncoder` to ensure passwords are never stored in plain text, making the database secure against leaks.
-  - **Dynamic Registration**: Developed a custom Registration Controller and Service to handle user creation dynamically.
-  - **JdbcUserDetailsManager Integration**: Leveraged Spring Security's internal manager to perform secure `INSERT` operations into the `users` and `authorities` tables.
-  - **Custom Signup UI**: Built a responsive JSP signup form with Bootstrap, integrated with Spring Form tags and CSRF protection.
-
-  ### Technical Deep-Dive:
-  - **Dependency Injection**: Orchestrated `PasswordEncoder`, and `UserDetailsManager` beans for a clean architectural flow.
-
-  ### 📸 Preview
-  **1. Secure Registration Form:**
-  <br>
-  <img src="https://github.com/user-attachments/assets/3e95f553-6ed3-4f20-bf61-ba965c0cc634" width="200" alt="Signup Page">
-
-  <br>
-
-  **2. Encrypted Database View:**
-  <br>
-  <img src="https://github.com/user-attachments/assets/a2fa266b-d852-45a7-89cf-3a25d1c8127b" width="500" alt="BCrypt Hashed Passwords">
-</details>
-
-<details>
-  <summary><b>Task 6: Stateless Authentication with Spring Boot & JWT</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task20_Security_JWT/springJwt">[LINK]</a></summary>
-
-  ### Focus: Modern REST Security
-  Transitioning from traditional Session-Based security to **Stateless JWT (JSON Web Token) Authentication** for RESTful APIs.
-
-  ### Key Implementations:
-  - **Stateless Architecture**: Configured `SessionCreationPolicy.STATELESS` in Spring Security to eliminate server-side session overhead.
-  - **CSRF Protection**: Disabled CSRF protection (`csrf.disable()`) as the API relies on stateless JWT authentication rather than session cookies.
-  - **Custom JWT Filter**: Developed `JwtAuthenticationFilter` (extending `OncePerRequestFilter`) to intercept requests, extract Bearer tokens from headers, and populate the `SecurityContextHolder`.
-  - **Clean Architecture & DTOs**: Implemented structured layers across `controllers`, `services`, `entities`, `repositories`, and `models` for request validation and response handling.
-   
-
- ### 📑 API Endpoints & Postman Verification
-  | Action | Method | Endpoint | Access | Description |
-  | :--- | :--- | :--- | :--- | :--- |
-  | **Register** | `POST` | `/rest/auth/register` | Public | Accepts user details (`firstname`, `email`, `role`, etc.) and returns an `accessToken`. |
-  | **Login** | `POST` | `/rest/auth/login` | Public | Authenticates credentials and returns a valid JWT `accessToken`. |
-  | **Home Dashboard** | `GET` | `/rest/home` | Secured | Protected resource requiring `Authorization: Bearer <JWT>` header to return secured payload. |
-
-</details>
-
----
-
 ## 🗄️ Hibernate ORM Tasks
 
 A progressive series of tasks covering Object-Relational Mapping (ORM) using **Hibernate**, from basic setup to complex relational mappings.
@@ -264,4 +129,157 @@ A progressive series of tasks covering Object-Relational Mapping (ORM) using **H
   - **Owning Side Management**: Used `mappedBy` on the non-owning side to prevent duplicate join-table entries.
   - **Data Integrity**: Handled bidirectional collection synchronizations without constraint violations.
 </details>
+
+---
+## 📦 Maven Build & Dependency Management 
+
+Transitioning from manual JAR dependency management to automated project lifecycle and build orchestration using **Apache Maven**.
+
+<details>
+  <summary><b>Task 14: Maven Build Automation & Multi-Module Configuration</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task14">[LINK]</a></summary>
+
+  ### Focus: Project Structuring & Lifecycle Management
+  Automating build workflows, managing library dependencies, and standardizing project structure using **Apache Maven**.
+
+  ### Key Implementations:
+  - **Dependency Management**: Centralized dependency declarations and version control inside `pom.xml` to eliminate JAR conflicts.
+  - **Build Lifecycle**: Executed standard lifecycle phases (`clean`, `compile`, `test`, `package`, `install`) for repeatable builds.
+  - **Packaging**: Packaged application components into executable JAR / WAR artifacts.
+
+</details>
+
+---
+## 🔐 Spring Security Tasks
+
+This series of tasks demonstrates a progressive journey through implementing **Spring Security** in Spring MVC, moving from basic authentication to advanced, role-aware dynamic interfaces.
+
+
+
+<details>
+  <summary><b>Task 15: Fundamental RBAC with Default UI</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task15_Security_1">[LINK]</a></summary>
+
+  ###  Focus: The Foundation
+  The starting point of implementing **Role-Based Access Control (RBAC)**.
+
+  ###  Key Implementations
+  - **Core Authentication**: Secured the application using Spring's built-in security filters.
+  - **Role Definition**: Established specific access rules for `ADMIN` and `SYSTEM` roles.
+  - **Zero-XML Config**: Fully configured using Java annotations.
+
+  ### 📸 Preview
+  <img src="https://github.com/user-attachments/assets/43d02eed-e315-411d-a075-3c409c9792a1" width="300" alt="Default Login Page">
+</details>
+
+ 
+
+<details>
+  <summary><b>Task 16: UI Customization & Resource Management</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task16_Security_2/Task16_Security_2">[LINK]</a></summary>
+
+  ###  Focus: User Experience (UX)
+  Moving beyond defaults to create a branded and user-friendly security flow.
+
+  ###  Enhancements
+  - **Custom Login Page**: Replaced the default Spring form with a personalized JSP interface.
+  - **Static Assets**: Configured `ResourceHandlers` to serve CSS/Images while maintaining security integrity.
+  - **Secure Logout**: Implemented proper session invalidation and logout redirection.
+
+  ### 📸 Preview
+  <img src="https://github.com/user-attachments/assets/cd4bee9a-37fa-4ccc-9035-dca1b538d52e" width="300" alt="Custom Login Page">
+</details>
+
+ 
+
+<details>
+  <summary><b>Task 17: Advanced Authorization & Dynamic UI Control</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task17_Security_3">[LINK]</a></summary>
+
+  ###  Focus: Professional UI Logic
+  The most advanced stage where the UI becomes **Role-Aware**, providing a seamless and professional experience.
+
+  ###  Advanced Features
+  - **Dynamic Content (Security Taglibs)**: The interface now adapts to the user. Admin-specific buttons or sections are hidden/shown based on the logged-in user's roles.
+  - **Principal Awareness**: Real-time display of the current **Username** and **Assigned Roles** directly on the dashboard.
+  - **Custom Access Denied Page**: Handled the `403 Forbidden` error by redirecting to a custom-designed page for unauthorized attempts.
+
+  ###  Technical Deep-Dive
+  - Used `<security:authorize>` for conditional rendering in JSP.
+  - Configured `.exceptionHandling().accessDeniedPage("/access-denied")` in the Security Filter Chain.
+
+  ### 📸 Preview
+   **1. Role-Based Content & User Info:**
+  <br>
+  <img src="https://github.com/user-attachments/assets/8bac0fab-981e-4702-93fe-3a14fc1c63cf" width="500" alt="contentBasedOnRole">
+  
+  <br>
+
+  **2. Custom Access Denied Page:**
+  <br>
+  <img src="https://github.com/user-attachments/assets/0d982419-b7e4-4854-b183-fd2817d6faf1" width="400" alt="Custom Access Denied Page">
+</details>
+
+<details>
+  <summary><b>Task 18: Persistence with JDBC Authentication</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task18_Security_4">[LINK]</a></summary>
+
+  ### Focus:
+  Transitioning from In-Memory storage to a persistent **MySQL Database**.
+
+  ### Key Implementations:
+  - **JDBC Authentication**: Integrated Spring Security with MySQL for real-time user verification.
+  - **Connection Pooling (c3p0)**: Used `ComboPooledDataSource` for efficient database resource management.
+  - **Spring Security 5 Format**: Used the `{id}encodedPassword` (e.g., `{noop}`) for modern password storage.
+  - **Properties Configuration**: Externalized credentials in `application.properties`.
+
+  ### Schema Preview
+  <img src="https://github.com/user-attachments/assets/bf009343-3198-41ae-bd85-867acb5b9b54" width="500" alt="MySQL DB">
+</details>
+
+<details>
+  <summary><b>Task 19: User Registration & BCrypt Password Encryption</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/Task19_Security_5/Task19_Security_5">[LINK]</a></summary>
+
+  ### Focus: Secure User Onboarding
+  Implementing a complete **Signup flow** with industrial-standard security practices.
+
+  ### Key Implementations:
+  - **BCrypt Hashing**: Integrated `BCryptPasswordEncoder` to ensure passwords are never stored in plain text, making the database secure against leaks.
+  - **Dynamic Registration**: Developed a custom Registration Controller and Service to handle user creation dynamically.
+  - **JdbcUserDetailsManager Integration**: Leveraged Spring Security's internal manager to perform secure `INSERT` operations into the `users` and `authorities` tables.
+  - **Custom Signup UI**: Built a responsive JSP signup form with Bootstrap, integrated with Spring Form tags and CSRF protection.
+
+  ### Technical Deep-Dive:
+  - **Dependency Injection**: Orchestrated `PasswordEncoder`, and `UserDetailsManager` beans for a clean architectural flow.
+
+  ### 📸 Preview
+  **1. Secure Registration Form:**
+  <br>
+  <img src="https://github.com/user-attachments/assets/3e95f553-6ed3-4f20-bf61-ba965c0cc634" width="200" alt="Signup Page">
+
+  <br>
+
+  **2. Encrypted Database View:**
+  <br>
+  <img src="https://github.com/user-attachments/assets/a2fa266b-d852-45a7-89cf-3a25d1c8127b" width="500" alt="BCrypt Hashed Passwords">
+</details>
+
+<details>
+  <summary><b>Task 20: Stateless Authentication with Spring Boot & JWT</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task20_Security_JWT/springJwt">[LINK]</a></summary>
+
+  ### Focus: Modern REST Security
+  Transitioning from traditional Session-Based security to **Stateless JWT (JSON Web Token) Authentication** for RESTful APIs.
+
+  ### Key Implementations:
+  - **Stateless Architecture**: Configured `SessionCreationPolicy.STATELESS` in Spring Security to eliminate server-side session overhead.
+  - **CSRF Protection**: Disabled CSRF protection (`csrf.disable()`) as the API relies on stateless JWT authentication rather than session cookies.
+  - **Custom JWT Filter**: Developed `JwtAuthenticationFilter` (extending `OncePerRequestFilter`) to intercept requests, extract Bearer tokens from headers, and populate the `SecurityContextHolder`.
+  - **Clean Architecture & DTOs**: Implemented structured layers across `controllers`, `services`, `entities`, `repositories`, and `models` for request validation and response handling.
+   
+
+ ### 📑 API Endpoints & Postman Verification
+  | Action | Method | Endpoint | Access | Description |
+  | :--- | :--- | :--- | :--- | :--- |
+  | **Register** | `POST` | `/rest/auth/register` | Public | Accepts user details (`firstname`, `email`, `role`, etc.) and returns an `accessToken`. |
+  | **Login** | `POST` | `/rest/auth/login` | Public | Authenticates credentials and returns a valid JWT `accessToken`. |
+  | **Home Dashboard** | `GET` | `/rest/home` | Secured | Protected resource requiring `Authorization: Bearer <JWT>` header to return secured payload. |
+
+</details>
+
+---
 
