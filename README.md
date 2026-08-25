@@ -85,6 +85,11 @@ This repository is a comprehensive collection of weekly tasks and projects focus
 
 </details>
 
+<details>
+   <summary><b>🚀 <a href="">Graduation Project: ToDo App (Microservices + Spring Security + Spring boot + Data JPA)</a></b></summary>
+   Currently Working On, In Progress ...
+</details>
+
 ---
   ## 🌱 Spring Core Tasks
 
