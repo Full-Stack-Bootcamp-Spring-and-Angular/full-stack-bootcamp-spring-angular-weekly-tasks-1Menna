@@ -195,7 +195,7 @@ Building dynamic web applications, handling HTTP request flows, processing user 
 Mastering data serialization standards and constructing lightweight RESTful endpoints using **Jackson Databind** and core **Spring Web MVC** annotations.
 
 <details>
-  <summary><b>JSON Data Binding with Jackson ObjectMapper</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task7_REST_1">[LINK]</a></summary>
+  <summary><b>JSON Data Binding with Jackson ObjectMapper</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Jackson_Task/Task16_Jackson">[LINK]</a></summary>
 
   ### Focus: Data Serialization & Deserialization
   Understanding the mechanics of JSON manipulation in Java applications using the **Jackson Databind** library.
@@ -208,7 +208,7 @@ Mastering data serialization standards and constructing lightweight RESTful endp
 </details>
 
 <details>
-  <summary><b>Building RESTful Endpoints with Spring Web</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task8_REST_2">[LINK]</a></summary>
+  <summary><b>Building RESTful Endpoints with Spring Web</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/RestAPI_Task/Task17_RestAPI">[LINK]</a></summary>
 
   ### Focus: Direct HTTP Response Body Rendering
   Bypassing traditional view resolvers to deliver plain text and automatic JSON payloads directly to HTTP clients.
