@@ -190,6 +190,37 @@ Building dynamic web applications, handling HTTP request flows, processing user 
 </details>
 
 ---
+## 🔌 Spring REST API Tasks
+
+Mastering data serialization standards and constructing lightweight RESTful endpoints using **Jackson Databind** and core **Spring Web MVC** annotations.
+
+<details>
+  <summary><b>JSON Data Binding with Jackson ObjectMapper</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task7_REST_1">[LINK]</a></summary>
+
+  ### Focus: Data Serialization & Deserialization
+  Understanding the mechanics of JSON manipulation in Java applications using the **Jackson Databind** library.
+
+  ### Key Implementations:
+  - **JSON to Java (Deserialization)**: Utilized `ObjectMapper.readValue()` to parse raw `.json` files into strongly-typed Java POJOs.
+  - **Java to JSON (Serialization)**: Converted Java domain objects into structured JSON files using `ObjectMapper.writeValue()`.
+  - **Pretty Printing**: Enabled `SerializationFeature.INDENT_OUTPUT` to format output JSON payloads with readable indentation.
+
+</details>
+
+<details>
+  <summary><b>Building RESTful Endpoints with Spring Web</b> 🌟 <a href="https://github.com/Full-Stack-Bootcamp-Spring-and-Angular/full-stack-bootcamp-spring-angular-weekly-tasks-1Menna/tree/main/Task8_REST_2">[LINK]</a></summary>
+
+  ### Focus: Direct HTTP Response Body Rendering
+  Bypassing traditional view resolvers to deliver plain text and automatic JSON payloads directly to HTTP clients.
+
+  ### Key Implementations:
+  - **Response Serialization**: Annotated controller handler methods with `@ResponseBody` to write data directly into the HTTP response stream.
+  - **Automatic Object Marshalling**: Returned Java domain models (`Student`) from endpoints, allowing Spring's message converters (Jackson) to serialize them into JSON.
+  - **API Controller Architecture**: Combined `@Controller` and `@ResponseBody` (or HTTP wrappers like `ResponseEntity`), laying the foundation for modern `@RestController` implementations.
+
+</details>
+
+---
 ## 🗄️ Hibernate ORM Tasks
 
 A progressive series of tasks covering Object-Relational Mapping (ORM) using **Hibernate**, from basic setup to complex relational mappings.
