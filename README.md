@@ -87,7 +87,7 @@ This repository is a comprehensive collection of weekly tasks and projects focus
 
 <details>
    <summary><b>🚀 <a href="https://github.com/1Menna/TodoApp-Microservice">Graduation Project: ToDo App (Microservices + Spring Security + Spring boot + Data JPA)</a></b></summary>
-   Currently Working On, In Progress ...
+      📖 For the complete project documentation, architecture, and API endpoints, visit the project repository.
 </details>
 
 ---
